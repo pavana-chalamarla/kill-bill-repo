@@ -5,21 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class LevelsScript : MonoBehaviour
 {
-    public void Leve1()
+    public void Level1()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level-1");
     }
-    public void Leve2()
+    public void Level2()
     {
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("Level-2");
     }
     public void Level3()
     {
-        SceneManager.LoadScene("Level3");
+        SceneManager.LoadScene("Level-3");
     }
     public void Level4()
     {
-        SceneManager.LoadScene("Level4");
+        SceneManager.LoadScene("Level-4");
+    }
+ public void Level5()
+    {
+        SceneManager.LoadScene("Level-5");
     }
 
     // Start is called before the first frame update
