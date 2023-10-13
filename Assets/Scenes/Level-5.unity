@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 508235201}
   - component: {fileID: 508235200}
   - component: {fileID: 508235199}
+  - component: {fileID: 508235202}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Untagged
@@ -421,6 +422,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &508235202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508235198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880077ad9268548a2a15695fdc309abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverUI: {fileID: 0}
 --- !u!1 &516522972
 GameObject:
   m_ObjectHideFlags: 0
