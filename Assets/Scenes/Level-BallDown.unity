@@ -6008,6 +6008,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGravityScale: -4
+  groundCheck: {fileID: 1879696789}
+  groundlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  jump: 16
   newPosition: {fileID: 2144075613}
 --- !u!1 &1887348562
 GameObject:
