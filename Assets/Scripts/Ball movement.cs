@@ -11,7 +11,6 @@ public class Ballmovement : MonoBehaviour
     [SerializeField] public Rigidbody2D rb;
     [SerializeField] public Transform groundCheck;
     [SerializeField] public LayerMask groundlayer;
-    public mirror mirrorBallScript;
     // Start is called before the first frame update
 
     public void Start()
@@ -20,13 +19,6 @@ public class Ballmovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.gameObject.CompareTag("Mirror"))
-        {
-            mirrorBallScript.ToggleDirection();
-        }
-    }
     public void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
