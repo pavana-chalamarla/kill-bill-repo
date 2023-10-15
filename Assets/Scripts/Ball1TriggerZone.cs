@@ -14,6 +14,7 @@ public class Ball1TriggerZone : MonoBehaviour
         {
             ball1Entered = true;
             CheckCollisions();
+            Debug.Log("Danger");
         }
     }
 
