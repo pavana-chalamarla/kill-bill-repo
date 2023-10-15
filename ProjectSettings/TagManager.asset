@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Mirror
   - Block
+  - TopFlag
+  - BottomFlag
   layers:
   - Default
   - TransparentFX
