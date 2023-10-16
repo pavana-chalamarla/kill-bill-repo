@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837034d1a23f44b1f92c14c9dd5c3e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!61 &178128543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -558,8 +558,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178128541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.7846, y: 2.3849, z: 0}
-  m_LocalScale: {x: 0.808997, y: 4.929806, z: 0.77903}
+  m_LocalPosition: {x: -5.0475, y: 2.3849, z: 0}
+  m_LocalScale: {x: 1.3347641, y: 4.929806, z: 0.77903}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1560,7 +1560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756468874}
   m_LocalRotation: {x: -0.006172422, y: -0.0061705136, z: 0.70718914, w: 0.7069705}
-  m_LocalPosition: {x: -5.01, y: 0.4, z: -0.06}
+  m_LocalPosition: {x: -5.18, y: 0.36, z: -0.06}
   m_LocalScale: {x: 0.7389, y: 0.047452, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2125,7 +2125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057696756}
   m_LocalRotation: {x: -0, y: -0, z: -0.70849204, w: 0.7057188}
-  m_LocalPosition: {x: -4.84, y: 0.82, z: 0}
+  m_LocalPosition: {x: -4.97, y: 0.69, z: 0}
   m_LocalScale: {x: 0.3288709, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2621,7 +2621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f14afa0e8a444102b5dee480ace0a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!61 &1560174121
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2727,8 +2727,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1560174119}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.3129, y: -3.7, z: 0}
-  m_LocalScale: {x: 0.8363665, y: 3.305262, z: 1}
+  m_LocalPosition: {x: -5.2253, y: -4.0505, z: 0}
+  m_LocalScale: {x: 1.3621379, y: 4.006308, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3599,6 +3599,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   mirrorBallScript: {fileID: 2064182627}
+  fcolor1: {fileID: 178128542}
+  fcolor2: {fileID: 1560174120}
 --- !u!58 &1932950015
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3840,6 +3842,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   mirrorBallScript: {fileID: 0}
+  fcolor1: {fileID: 178128542}
+  fcolor2: {fileID: 1560174120}
 --- !u!114 &2064182627
 MonoBehaviour:
   m_ObjectHideFlags: 0

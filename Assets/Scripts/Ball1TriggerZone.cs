@@ -6,39 +6,51 @@ using UnityEngine.SceneManagement;
 
 public class Ball1TriggerZone : MonoBehaviour
 {
-    public bool ball1Entered { get; private set; } = false;
+    public bool ball1Entered { get; set; } = false;
     public Color originalColor; // Store the original color
     private GameObject flagObject;
 
     private void Start()
     {
+        Debug.Log("collision.");
         // Find the object with the tag "flag1" at the start
         flagObject = GameObject.FindGameObjectWithTag("TopFlag");
         if (flagObject == null)
         {
-            Debug.LogError("No object with tag 'TopFlag' found.");
+            Debug.Log("No object with tag 'TopFlag' found.");
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
+   
+    private void OnTriggerEnter2D (Collider2D other)
     {
+
+        if (other.gameObject.CompareTag("Mirror"))
+        {
+            Debug.Log("miroor coll");
+        }
+
+
         if (other.gameObject.name == "Ball1")
         {
-            ChangeFlagColor(Color.green);
-            ball1Entered = true;
+            Debug.Log("collision dtected");
+
+            //ChangeFlagColor(Color.green);
+           // ball1Entered = true;
             CheckCollisions();
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+
+       
         if (other.gameObject.name == "Ball1")
         {
-            ChangeFlagColor(originalColor);
-            ball1Entered = false;
+            //ChangeFlagColor(originalColor);
+            //ball1Entered = false;
         }
     }
-    private void CheckCollisions()
+    public void CheckCollisions()
     {
         // Find the Ball2TriggerZone GameObject
         Ball2TriggerZone ball2Zone = FindObjectOfType<Ball2TriggerZone>();
@@ -49,7 +61,7 @@ public class Ball1TriggerZone : MonoBehaviour
         }
     }
 
-    private void ChangeFlagColor(Color color)
+    public void ChangeFlagColor(Color color)
     {
         if (flagObject != null)
         {

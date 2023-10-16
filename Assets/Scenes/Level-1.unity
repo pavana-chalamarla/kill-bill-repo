@@ -913,6 +913,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   mirrorBallScript: {fileID: 0}
+  fcolor1: {fileID: 827157622}
+  fcolor2: {fileID: 1230238173}
 --- !u!1 &297505916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,6 +1284,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   mirrorBallScript: {fileID: 0}
+  fcolor1: {fileID: 827157622}
+  fcolor2: {fileID: 1230238173}
 --- !u!1 &527011581
 GameObject:
   m_ObjectHideFlags: 0

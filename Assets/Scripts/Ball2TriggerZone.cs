@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ball2TriggerZone : MonoBehaviour
 {
-    public bool Ball2Entered { get; private set; } = false;
+    public bool Ball2Entered { get; set; } = false;
     private GameObject flagObject;
     public Color originalColor; // Store the original color
 
@@ -22,8 +22,8 @@ public class Ball2TriggerZone : MonoBehaviour
     {
         if (other.gameObject.name == "Ball2")
         {
-            ChangeFlagColor(Color.green);
-            Ball2Entered = true;
+            //ChangeFlagColor(Color.green);
+            //Ball2Entered = true;
             CheckCollisions();
         }
     }
@@ -32,8 +32,8 @@ public class Ball2TriggerZone : MonoBehaviour
     {
         if (other.gameObject.name == "Ball2")
         {
-            ChangeFlagColor(originalColor);
-            Ball2Entered = false;
+            //ChangeFlagColor(originalColor);
+            //Ball2Entered = false;
         }
     }
 
@@ -48,7 +48,7 @@ public class Ball2TriggerZone : MonoBehaviour
         }
     }
 
-    private void ChangeFlagColor(Color color)
+    public void ChangeFlagColor(Color color)
     {
         if (flagObject != null)
         {

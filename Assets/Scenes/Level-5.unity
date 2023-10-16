@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837034d1a23f44b1f92c14c9dd5c3e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!61 &516522974
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -562,8 +562,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 516522972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.4068, y: 1.04, z: 0}
-  m_LocalScale: {x: 0.8072546, y: 2.8020926, z: 1}
+  m_LocalPosition: {x: 6.2868, y: 1.04, z: 0}
+  m_LocalScale: {x: 1.5731127, y: 2.8020926, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -711,7 +711,7 @@ GameObject:
   - component: {fileID: 587103960}
   m_Layer: 0
   m_Name: Triangle
-  m_TagString: Untagged
+  m_TagString: TopFlag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -795,7 +795,7 @@ GameObject:
   - component: {fileID: 690279517}
   m_Layer: 0
   m_Name: Triangle (1)
-  m_TagString: Untagged
+  m_TagString: BottomFlag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1491,7 +1491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f14afa0e8a444102b5dee480ace0a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!61 &949332062
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1597,8 +1597,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949332060}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.6478, y: -5.6074, z: 0}
-  m_LocalScale: {x: 0.6857742, y: 3.0729313, z: 1}
+  m_LocalPosition: {x: -7.8424, y: -5.6074, z: 0}
+  m_LocalScale: {x: 1.3022993, y: 3.0729313, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1692,6 +1692,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   mirrorBallScript: {fileID: 0}
+  fcolor1: {fileID: 516522973}
+  fcolor2: {fileID: 949332061}
 --- !u!114 &1005140574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3203,6 +3205,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   mirrorBallScript: {fileID: 0}
+  fcolor1: {fileID: 516522973}
+  fcolor2: {fileID: 949332061}
 --- !u!58 &1541234803
 CircleCollider2D:
   m_ObjectHideFlags: 0
