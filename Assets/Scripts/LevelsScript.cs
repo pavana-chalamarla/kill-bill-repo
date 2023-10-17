@@ -4,10 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelsScript : MonoBehaviour
-{
-    public void Level1()
+{	
+	public void Level1()
     {
         SceneManager.LoadScene("Level-1");
+    }
+    public void mainmenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
     public void Level2()
     {
