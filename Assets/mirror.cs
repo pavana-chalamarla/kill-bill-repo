@@ -15,7 +15,9 @@ public class mirror : MonoBehaviour
 
     [SerializeField] private Transform originalBall; // Reference to the original ball's Transform
     private Transform mirrorTransform;
-    private Ballmovement mirrorBallMovement;
+    public Ballmovement mirrorBallMovement;
+    private bool shouldReverse = true;
+
 
     void Awake()
     {
@@ -30,7 +32,8 @@ public class mirror : MonoBehaviour
 
     void LateUpdate()
     {
-        float horizontal = -1*originalBall.GetComponent<Ballmovement>().horizontal;
+        float directionMultiplier = shouldReverse ? -1 : 1;
+        float horizontal = directionMultiplier * originalBall.GetComponent<Ballmovement>().horizontal;
         mirrorBallMovement.horizontal = horizontal;
 
         // Mirror the jump movement (opposite jump)
@@ -42,5 +45,13 @@ public class mirror : MonoBehaviour
         {
             mirrorBallMovement.rb.velocity = new Vector2(mirrorBallMovement.rb.velocity.x, -mirrorBallMovement.rb.velocity.y * 0.5f * Time.deltaTime);
         }
+    }
+
+    public void ToggleDirection()
+    {
+        //Debug.Log("working");
+        shouldReverse = !shouldReverse; // Toggle the direction
+        LateUpdate();
+
     }
 }
