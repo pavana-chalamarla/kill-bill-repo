@@ -3161,7 +3161,6 @@ GameObject:
   - component: {fileID: 1541234803}
   - component: {fileID: 1541234802}
   - component: {fileID: 1541234807}
-  - component: {fileID: 1541234808}
   m_Layer: 0
   m_Name: Ball1
   m_TagString: Finish
@@ -3335,19 +3334,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 967896219}
---- !u!114 &1541234808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541234800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f888b0268168848ea9e929523326d3d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  URL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSeyIBdBXKV4-CK_MeVbmoF4Fcbtgr3EIQkpfA68xqKuXBbrJA/formResponse
 --- !u!1 &1566087658
 GameObject:
   m_ObjectHideFlags: 0
