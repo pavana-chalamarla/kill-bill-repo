@@ -34,15 +34,6 @@ public class Analytics : MonoBehaviour
         applicationVersion = Application.version;
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            RecordLevelRestart();
-        }
-
-    }
-
     public void SetAttemptStopwatch(Stopwatch sw)
     {
         saveObject.attemptStopwatch = sw;
@@ -97,7 +88,7 @@ public class Analytics : MonoBehaviour
     {
         saveObject.restarts = 0;
         saveObject.attemptStopwatch.Restart();
-        saveObject.singleFlag=0;
+        saveObject.singleFlag = 0;
     }
 
     private IEnumerator Post(long sessionID, string totalTime)
