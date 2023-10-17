@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ball2TriggerZone : MonoBehaviour
 {
@@ -37,14 +38,22 @@ public class Ball2TriggerZone : MonoBehaviour
         }
     }
 
-    private void CheckCollisions()
+    public void CheckCollisions()
     {
         // Find the Ball1TriggerZone GameObject
         Ball1TriggerZone ball1Zone = FindObjectOfType<Ball1TriggerZone>();
 
         if (ball1Zone != null && Ball2Entered && ball1Zone.ball1Entered)
+        {//1
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
+    public void ChangeFlagColor(Color color)
+    {
+        if (flagObject != null)
         {
-            // Do nothing here, as the scene loading is handled in Ball1TriggerZone
+            flagObject.GetComponent<SpriteRenderer>().color = color;
         }
     }
 

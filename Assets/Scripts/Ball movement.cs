@@ -32,7 +32,8 @@ public class Ballmovement : MonoBehaviour
         {
             fcolor2.ChangeFlagColor(Color.green);
             fcolor2.Ball2Entered = true;
-
+            fcolor2.CheckCollisions();
+//2
         }
         if (collider.gameObject.name == "Finish1")
         {
@@ -48,15 +49,15 @@ public class Ballmovement : MonoBehaviour
 
         if (collider.gameObject.name == "Finish1")
         {
-            fcolor1.ChangeFlagColor(fcolor1.originalColor);
-            fcolor1.ball1Entered = true;
+            fcolor1.ChangeFlagColor(Color.white);
+            fcolor1.ball1Entered = false;
 
 
         }
         if (collider.gameObject.name == "Finish2")
         {
-            fcolor2.ChangeFlagColor(fcolor2.originalColor);
-            fcolor2.Ball2Entered = true;
+            fcolor2.ChangeFlagColor(Color.white);
+            fcolor2.Ball2Entered = false;
 
 
         }
