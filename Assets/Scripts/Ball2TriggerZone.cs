@@ -59,14 +59,6 @@ public class Ball2TriggerZone : MonoBehaviour
             flagObject.GetComponent<SpriteRenderer>().color = color;
         }
     }
-
-    public void ChangeFlagColor(Color color)
-    {
-        if (flagObject != null)
-        {
-            flagObject.GetComponent<SpriteRenderer>().color = color;
-        }
-    }
     
 
 }
