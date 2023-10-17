@@ -10,20 +10,19 @@ public class Ball2TriggerZone : MonoBehaviour
 
     private void Start()
     {
-        // Find the object with the tag "flag1" at the start
-        flagObject = GameObject.FindGameObjectWithTag("BottomFlag");
-        if (flagObject == null)
-        {
-            Debug.LogError("No object with tag 'BottomFlag' found.");
-        }
+       
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name == "Ball2")
         {
+<<<<<<< Updated upstream
             //ChangeFlagColor(Color.green);
             //Ball2Entered = true;
+=======
+            Ball2Entered = true;
+>>>>>>> Stashed changes
             CheckCollisions();
         }
     }
@@ -32,8 +31,12 @@ public class Ball2TriggerZone : MonoBehaviour
     {
         if (other.gameObject.name == "Ball2")
         {
+<<<<<<< Updated upstream
             //ChangeFlagColor(originalColor);
             //Ball2Entered = false;
+=======
+            Ball2Entered = false;
+>>>>>>> Stashed changes
         }
     }
 

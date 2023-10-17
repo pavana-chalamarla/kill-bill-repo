@@ -12,6 +12,7 @@ public class Ball1TriggerZone : MonoBehaviour
 
     private void Start()
     {
+<<<<<<< Updated upstream
         Debug.Log("collision.");
         // Find the object with the tag "flag1" at the start
         flagObject = GameObject.FindGameObjectWithTag("TopFlag");
@@ -19,6 +20,9 @@ public class Ball1TriggerZone : MonoBehaviour
         {
             Debug.Log("No object with tag 'TopFlag' found.");
         }
+=======
+
+>>>>>>> Stashed changes
     }
    
     private void OnTriggerEnter2D (Collider2D other)
@@ -32,12 +36,18 @@ public class Ball1TriggerZone : MonoBehaviour
 
         if (other.gameObject.name == "Ball1")
         {
+<<<<<<< Updated upstream
             Debug.Log("collision dtected");
 
             //ChangeFlagColor(Color.green);
            // ball1Entered = true;
             CheckCollisions();
+=======
+                ball1Entered = true;
+                CheckCollisions();
+>>>>>>> Stashed changes
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -46,8 +56,12 @@ public class Ball1TriggerZone : MonoBehaviour
        
         if (other.gameObject.name == "Ball1")
         {
+<<<<<<< Updated upstream
             //ChangeFlagColor(originalColor);
             //ball1Entered = false;
+=======
+            ball1Entered = false;
+>>>>>>> Stashed changes
         }
     }
     public void CheckCollisions()
