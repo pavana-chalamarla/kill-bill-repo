@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
     }
 
     public void QuitGame()
@@ -32,6 +32,10 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Levels");
         Debug.Log("Levels");
+    }
+    public void controls()
+    {
+        SceneManager.LoadScene("Controls");
     }
 
 }
