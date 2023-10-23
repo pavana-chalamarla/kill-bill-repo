@@ -13,6 +13,7 @@ public class Ballmovement : MonoBehaviour
     [SerializeField] public LayerMask groundlayer;
     public mirror mirrorBallScript;
     public Ball1TriggerZone fcolor1;
+    public MagneicObj mg;
     public Ball2TriggerZone fcolor2;
     // Start is called before the first frame update
 
@@ -42,7 +43,12 @@ public class Ballmovement : MonoBehaviour
             fcolor1.CheckCollisions();
 
         }
-       
+
+        if (collider.gameObject.name=="magnet")
+        {
+            mg.isAttracting = true;
+        }
+
     }
     private void OnTriggerExit2D(Collider2D collider)
     {
@@ -61,6 +67,12 @@ public class Ballmovement : MonoBehaviour
 
 
         }
+
+        if (collider.gameObject.name == "magnet")
+        {
+            mg.isAttracting = false;
+        }
+
     }
     public void Update()
     {
