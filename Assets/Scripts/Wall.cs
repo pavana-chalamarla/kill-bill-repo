@@ -15,24 +15,17 @@ public class WallController : MonoBehaviour
             hitCount++;
             Debug.Log(hitCount);
 
-            if (hitCount >= maxHits)
+            if (hitCount == maxHits)
             {
-                // Destroy the wall when hit three times.
                 Destroy(gameObject);
             }
             else
             {
                 // Apply a cracked texture gradually.
                 Debug.Log("applying cracks");
-                ApplyCracks();
+            
             }
         }
-    }
-
-    private void ApplyCracks()
-    {
-        // Adjust the wall's texture to show cracks.
-        GetComponent<SpriteRenderer>().material.mainTexture = crackedWallTexture;
     }
 }
 
