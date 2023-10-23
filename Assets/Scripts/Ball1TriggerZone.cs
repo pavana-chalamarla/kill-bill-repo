@@ -55,11 +55,8 @@ public class Ball1TriggerZone : MonoBehaviour
         // Find the Ball2TriggerZone GameObject
         Ball2TriggerZone ball2Zone = FindObjectOfType<Ball2TriggerZone>();
 
-        Analytics.Instance.RecordSingleFlags(ball1Entered,ball2Zone.Ball2Entered);
-
         if (ball2Zone != null && ball1Entered && ball2Zone.Ball2Entered)
         {
-            Analytics.Instance.Save();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

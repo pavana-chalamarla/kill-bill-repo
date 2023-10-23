@@ -8,6 +8,9 @@ TagManager:
   - Block
   - TopFlag
   - BottomFlag
+  - Enemy
+  - Ground
+  - Flagmove
   layers:
   - Default
   - TransparentFX
