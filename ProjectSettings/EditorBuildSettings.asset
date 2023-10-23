@@ -11,29 +11,29 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels.unity
     guid: 65aa2d67a91ac47af880e991fd4d7069
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level-1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Level-2.unity
+    path: Assets/Scenes/Level-round surface.unity
     guid: 9aabcbd7d8b7e466b9d5756baeb1f96c
   - enabled: 1
-    path: Assets/Scenes/Level-3.unity
+    path: Assets/Scenes/Level-ball support.unity
     guid: 09467e2e6d6a14f138577391640ef3c8
   - enabled: 1
-    path: Assets/Scenes/Level-4.unity
+    path: Assets/Scenes/Level-triangle.unity
     guid: eb070fb1a9f7042b9b7cf45443159067
   - enabled: 1
-    path: Assets/Scenes/Level-5.unity
+    path: Assets/Scenes/Level-Disappering Platform.unity
     guid: 84cc3418627a74d469f446f9ed247b83
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level-6.unity
     guid: 18b0ca541aca9463b8f1dcc3571e4c9b
   - enabled: 1
-    path: Assets/Scenes/Level-7.unity
+    path: Assets/Scenes/Level-floating block.unity
     guid: d701b3a9ed5fd48c996c1cc38a43c862
   - enabled: 1
-    path: Assets/Scenes/Level-8.unity
+    path: Assets/Scenes/Level-seesaw.unity
     guid: 6ae82749f45424e7d9b97708bb7eb287
   - enabled: 1
     path: Assets/Scenes/End.unity
