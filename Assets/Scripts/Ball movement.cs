@@ -18,6 +18,7 @@ public class Ballmovement : MonoBehaviour
     public bool flag = false;
     public Flagpostmove fm;
     public float moveSpeed = 5.0f; 
+     public MagneicObj mg;
     private float timerDuration = 5.0f;
     // Start is called before the first frame update
     
@@ -37,13 +38,10 @@ public class Ballmovement : MonoBehaviour
         StartCoroutine(FreezeForDuration(5.0f));
         Vector3 currentCoordinates = transform.position;
         Debug.Log(currentCoordinates);
-        
-       
-        
-        
-    
-        
-        
+        }
+        if (collider.gameObject.name=="magnet")
+        {
+            mg.isAttracting = true;
         }
         if (collider.gameObject.CompareTag("Mirror"))
         {
@@ -80,8 +78,10 @@ public class Ballmovement : MonoBehaviour
         {
             fcolor2.ChangeFlagColor(Color.white);
             fcolor2.Ball2Entered = false;
-
-
+        }
+        if (collider.gameObject.name=="magnet")
+        {
+            mg.isAttracting = true;
         }
     }
     public void Update()
