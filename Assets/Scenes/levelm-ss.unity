@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 58058378}
   - component: {fileID: 58058377}
+  - component: {fileID: 58058379}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: TopFlag
@@ -207,6 +208,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.225}
+--- !u!114 &58058379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58058376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d716bd8679947b5a160ee767b3495e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 519796727}
+  attractionSpeed: 1
+  isAttracting: 0
 --- !u!1 &111926163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,7 +1073,6 @@ GameObject:
   - component: {fileID: 361246717}
   - component: {fileID: 361246716}
   - component: {fileID: 361246715}
-  - component: {fileID: 361246718}
   m_Layer: 6
   m_Name: Square (12)
   m_TagString: Untagged
@@ -1177,21 +1192,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: -0.002, y: 1, z: 180.115}
---- !u!114 &361246718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 361246714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13d716bd8679947b5a160ee767b3495e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ball: {fileID: 519796727}
-  attractionSpeed: 1
-  isAttracting: 0
 --- !u!1 &390030455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,7 +1432,7 @@ MonoBehaviour:
     m_Bits: 64
   mirrorBallScript: {fileID: 0}
   fcolor1: {fileID: 827157622}
-  mg: {fileID: 361246718}
+  mg: {fileID: 58058379}
   fcolor2: {fileID: 1230238173}
 --- !u!1 &527011581
 GameObject:
