@@ -31,13 +31,11 @@ public class PlayerManager : MonoBehaviour
     public void restart()
     {
         Debug.Log("Restart button clicked."); // Add this line
-        Analytics.Instance.RecordLevelRestart();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void mainMenu()
     {
-        Analytics.Instance.Save();
         SceneManager.LoadScene("MainMenu");
         Debug.Log("Mainmenu");
     }
