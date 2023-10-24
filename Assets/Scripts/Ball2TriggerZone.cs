@@ -8,7 +8,7 @@ public class Ball2TriggerZone : MonoBehaviour
     public bool Ball2Entered { get; set; } = false;
     private GameObject flagObject;
     public Color originalColor; // Store the original color
-
+    public Ball1TriggerZone ball1Zone;
     private void Start()
     {
         // Find the object with the tag "flag1" at the start
@@ -41,7 +41,7 @@ public class Ball2TriggerZone : MonoBehaviour
     public void CheckCollisions()
     {
         // Find the Ball1TriggerZone GameObject
-        Ball1TriggerZone ball1Zone = FindObjectOfType<Ball1TriggerZone>();
+        ball1Zone = FindObjectOfType<Ball1TriggerZone>();
 
         Analytics.Instance.RecordSingleFlags(Ball2Entered,ball1Zone.ball1Entered);
 
