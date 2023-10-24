@@ -26,16 +26,13 @@ public class Ball1TriggerZone : MonoBehaviour
 
         if (other.gameObject.CompareTag("Mirror"))
         {
-            Debug.Log("miroor coll");
+            Debug.Log("mirror coll");
         }
 
 
         if (other.gameObject.name == "Ball1")
         {
-            Debug.Log("collision dtected");
-
-            //ChangeFlagColor(Color.green);
-           // ball1Entered = true;
+            Debug.Log("collision detected");
             CheckCollisions();
         }
     }
@@ -46,8 +43,7 @@ public class Ball1TriggerZone : MonoBehaviour
        
         if (other.gameObject.name == "Ball1")
         {
-            //ChangeFlagColor(originalColor);
-            //ball1Entered = false;
+            
         }
     }
     public void CheckCollisions()
