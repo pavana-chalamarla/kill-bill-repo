@@ -18,7 +18,10 @@ public class Ballmovement : MonoBehaviour
     public bool flag = false;
     public Flagpostmove fm;
     public float moveSpeed = 5.0f; 
+<<<<<<< Updated upstream
      public MagneicObj mg;
+=======
+>>>>>>> Stashed changes
     private float timerDuration = 5.0f;
     // Start is called before the first frame update
     
@@ -38,10 +41,20 @@ public class Ballmovement : MonoBehaviour
         StartCoroutine(FreezeForDuration(5.0f));
         Vector3 currentCoordinates = transform.position;
         Debug.Log(currentCoordinates);
+<<<<<<< Updated upstream
         }
         if (collider.gameObject.name=="magnet")
         {
             mg.isAttracting = true;
+=======
+        
+       
+        
+        
+    
+        
+        
+>>>>>>> Stashed changes
         }
         if (collider.gameObject.CompareTag("Mirror"))
         {
