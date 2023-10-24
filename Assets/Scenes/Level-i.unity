@@ -789,10 +789,7 @@ MonoBehaviour:
   flag: 0
   fm: {fileID: 0}
   moveSpeed: 5
-<<<<<<< Updated upstream:Assets/Scenes/Level-i.unity
   mg: {fileID: 0}
-=======
->>>>>>> Stashed changes:Assets/Scenes/Level-1.unity
 --- !u!1 &297505916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,10 +1165,7 @@ MonoBehaviour:
   flag: 0
   fm: {fileID: 0}
   moveSpeed: 5
-<<<<<<< Updated upstream:Assets/Scenes/Level-i.unity
   mg: {fileID: 0}
-=======
->>>>>>> Stashed changes:Assets/Scenes/Level-1.unity
 --- !u!1 &527011581
 GameObject:
   m_ObjectHideFlags: 0

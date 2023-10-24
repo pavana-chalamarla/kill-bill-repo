@@ -3345,10 +3345,7 @@ MonoBehaviour:
   flag: 0
   fm: {fileID: 0}
   moveSpeed: 5
-<<<<<<< Updated upstream:Assets/Scenes/Level-iv.unity
   mg: {fileID: 0}
-=======
->>>>>>> Stashed changes:Assets/Scenes/Level-4.unity
 --- !u!58 &1932950015
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3596,10 +3593,7 @@ MonoBehaviour:
   flag: 0
   fm: {fileID: 0}
   moveSpeed: 5
-<<<<<<< Updated upstream:Assets/Scenes/Level-iv.unity
   mg: {fileID: 0}
-=======
->>>>>>> Stashed changes:Assets/Scenes/Level-4.unity
 --- !u!114 &2064182627
 MonoBehaviour:
   m_ObjectHideFlags: 0
