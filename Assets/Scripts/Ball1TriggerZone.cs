@@ -9,7 +9,7 @@ public class Ball1TriggerZone : MonoBehaviour
     public bool ball1Entered { get; set; } = false;
     public Color originalColor; // Store the original color
     private GameObject flagObject;
-
+    public Ball2TriggerZone ball2Zone;
     private void Start()
     {
         Debug.Log("collision.");
@@ -26,16 +26,13 @@ public class Ball1TriggerZone : MonoBehaviour
 
         if (other.gameObject.CompareTag("Mirror"))
         {
-            Debug.Log("miroor coll");
+            Debug.Log("mirror coll");
         }
 
 
         if (other.gameObject.name == "Ball1")
         {
-            Debug.Log("collision dtected");
-
-            //ChangeFlagColor(Color.green);
-           // ball1Entered = true;
+            Debug.Log("collision detected");
             CheckCollisions();
         }
     }
@@ -46,17 +43,21 @@ public class Ball1TriggerZone : MonoBehaviour
        
         if (other.gameObject.name == "Ball1")
         {
-            //ChangeFlagColor(originalColor);
-            //ball1Entered = false;
+            
         }
     }
     public void CheckCollisions()
     {
         // Find the Ball2TriggerZone GameObject
-        Ball2TriggerZone ball2Zone = FindObjectOfType<Ball2TriggerZone>();
+        ball2Zone = FindObjectOfType<Ball2TriggerZone>();
 
         if (ball2Zone != null && ball1Entered && ball2Zone.Ball2Entered)
         {
+<<<<<<< HEAD
+=======
+            Debug.Log("call next scene");
+            Analytics.Instance.Save();
+>>>>>>> 23831bb74a7faf8c58badd8c84e37dc3a86f014b
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

@@ -8,9 +8,15 @@ TagManager:
   - Block
   - TopFlag
   - BottomFlag
+<<<<<<< HEAD
   - Enemy
   - Ground
   - Flagmove
+=======
+  - Ball1
+  - Ball2
+  - Wall
+>>>>>>> 23831bb74a7faf8c58badd8c84e37dc3a86f014b
   layers:
   - Default
   - TransparentFX
