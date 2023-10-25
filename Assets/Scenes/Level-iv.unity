@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.14158899, g: 0.32530496, b: 0.36611533, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,50 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &74633382
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 74633384}
-  - component: {fileID: 74633383}
-  m_Layer: 0
-  m_Name: AnalyticsObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &74633383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 74633382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93858d5063f5841a5b41a97d6845f96b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &74633384
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 74633382}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 32
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &97487117
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +453,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalColor: {r: 1, g: 1, b: 1, a: 0}
-  ball2Zone: {fileID: 1560174120}
 --- !u!61 &178128543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1773,7 +1728,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  ball2Zone: {fileID: 0}
 --- !u!61 &869582763
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2538,7 +2492,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalColor: {r: 1, g: 1, b: 1, a: 0}
-  ball1Zone: {fileID: 178128542}
 --- !u!61 &1560174121
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3387,8 +3340,12 @@ MonoBehaviour:
     m_Bits: 64
   mirrorBallScript: {fileID: 2064182627}
   fcolor1: {fileID: 178128542}
-  mg: {fileID: 0}
   fcolor2: {fileID: 1560174120}
+  isFrozen: 0
+  flag: 0
+  fm: {fileID: 0}
+  moveSpeed: 5
+  mg: {fileID: 0}
 --- !u!58 &1932950015
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3631,8 +3588,12 @@ MonoBehaviour:
     m_Bits: 64
   mirrorBallScript: {fileID: 0}
   fcolor1: {fileID: 178128542}
-  mg: {fileID: 0}
   fcolor2: {fileID: 1560174120}
+  isFrozen: 0
+  flag: 0
+  fm: {fileID: 0}
+  moveSpeed: 5
+  mg: {fileID: 0}
 --- !u!114 &2064182627
 MonoBehaviour:
   m_ObjectHideFlags: 0

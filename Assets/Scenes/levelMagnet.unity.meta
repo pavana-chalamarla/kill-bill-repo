@@ -1,13 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
 <<<<<<<< HEAD:Assets/Scenes/Level-ix.unity.meta
 guid: c17b2dc6ad0764a84b9746cd201b81cf
 ========
 guid: c735724a09d1348c1b5c738c6932845e
 >>>>>>>> 23831bb74a7faf8c58badd8c84e37dc3a86f014b:Assets/Scenes/levelMagnet.unity.meta
-=======
-guid: c735724a09d1348c1b5c738c6932845e
->>>>>>> Stashed changes
 DefaultImporter:
   externalObjects: {}
   userData: 
