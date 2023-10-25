@@ -653,7 +653,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1242527835}
         m_TargetAssemblyTypeName: LevelsScript, Assembly-CSharp
-        m_MethodName: mainmenu
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

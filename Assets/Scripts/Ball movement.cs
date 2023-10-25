@@ -11,6 +11,9 @@ public class Ballmovement : MonoBehaviour
     [SerializeField] public Rigidbody2D rb;
     [SerializeField] public Transform groundCheck;
     [SerializeField] public LayerMask groundlayer;
+    public mirror mirrorBallScript;
+    public Ball1TriggerZone fcolor1;
+    public Ball2TriggerZone fcolor2;
     // Start is called before the first frame update
 
     public void Start()
@@ -19,6 +22,46 @@ public class Ballmovement : MonoBehaviour
     }
 
     // Update is called once per frame
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Mirror"))
+        {
+            mirrorBallScript.ToggleDirection();
+        }
+        if (collider.gameObject.name == "Finish2")
+        {
+            fcolor2.ChangeFlagColor(Color.green);
+            fcolor2.Ball2Entered = true;
+            fcolor2.CheckCollisions();
+//2
+        }
+        if (collider.gameObject.name == "Finish1")
+        {
+            fcolor1.ChangeFlagColor(Color.green);
+            fcolor1.ball1Entered = true;
+            fcolor1.CheckCollisions();
+
+        }
+       
+    }
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+
+        if (collider.gameObject.name == "Finish1")
+        {
+            fcolor1.ChangeFlagColor(Color.white);
+            fcolor1.ball1Entered = false;
+
+
+        }
+        if (collider.gameObject.name == "Finish2")
+        {
+            fcolor2.ChangeFlagColor(Color.white);
+            fcolor2.Ball2Entered = false;
+
+
+        }
+    }
     public void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
