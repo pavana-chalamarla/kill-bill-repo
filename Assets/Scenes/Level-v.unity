@@ -454,6 +454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 <<<<<<<< HEAD:Assets/Scenes/Level-v.unity
   originalColor: {r: 0, g: 0, b: 0, a: 0}
+  ball2Zone: {fileID: 949332061}
 --- !u!61 &248733986
 ========
   originalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1687,7 +1688,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f14afa0e8a444102b5dee480ace0a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   originalColor: {r: 1, g: 1, b: 1, a: 1}
+=======
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  ball1Zone: {fileID: 248733985}
+>>>>>>> Stashed changes
 --- !u!61 &949332062
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1895,16 +1901,15 @@ MonoBehaviour:
   mirrorBallScript: {fileID: 0}
 <<<<<<<< HEAD:Assets/Scenes/Level-v.unity
   fcolor1: {fileID: 248733985}
-  fcolor2: {fileID: 949332061}
-  isFrozen: 0
-  flag: 0
-  fm: {fileID: 0}
-  moveSpeed: 5
   mg: {fileID: 0}
+<<<<<<< Updated upstream
 ========
   fcolor1: {fileID: 516522973}
   fcolor2: {fileID: 949332061}
 >>>>>>>> 23831bb74a7faf8c58badd8c84e37dc3a86f014b:Assets/Scenes/Level-5-dum.unity
+=======
+  fcolor2: {fileID: 949332061}
+>>>>>>> Stashed changes
 --- !u!114 &1005140574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3778,16 +3783,15 @@ MonoBehaviour:
   mirrorBallScript: {fileID: 0}
 <<<<<<<< HEAD:Assets/Scenes/Level-v.unity
   fcolor1: {fileID: 248733985}
-  fcolor2: {fileID: 949332061}
-  isFrozen: 0
-  flag: 0
-  fm: {fileID: 0}
-  moveSpeed: 5
   mg: {fileID: 0}
+<<<<<<< Updated upstream
 ========
   fcolor1: {fileID: 516522973}
   fcolor2: {fileID: 949332061}
 >>>>>>>> 23831bb74a7faf8c58badd8c84e37dc3a86f014b:Assets/Scenes/Level-5-dum.unity
+=======
+  fcolor2: {fileID: 949332061}
+>>>>>>> Stashed changes
 --- !u!58 &1541234803
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5523,6 +5527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalColor: {r: 0, g: 0, b: 0, a: 0}
+  ball2Zone: {fileID: 0}
 --- !u!61 &1927853657
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5596,6 +5601,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTogglePlatform: 2
+--- !u!1 &1965652269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1965652271}
+  - component: {fileID: 1965652270}
+  m_Layer: 0
+  m_Name: AnalyticsObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1965652270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965652269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93858d5063f5841a5b41a97d6845f96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1965652271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965652269}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1974446771
 GameObject:
   m_ObjectHideFlags: 0

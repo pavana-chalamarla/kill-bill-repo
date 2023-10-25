@@ -15,14 +15,7 @@ public class Ballmovement : MonoBehaviour
     public Ball1TriggerZone fcolor1;
     public MagneicObj mg;
     public Ball2TriggerZone fcolor2;
-    public bool isFrozen = false;
-    public bool flag = false;
-    public Flagpostmove fm;
-    public float moveSpeed = 5.0f; 
-     public MagneicObj mg;
-    private float timerDuration = 5.0f;
-    // Start is called before the first frame update
-    
+
 
     public void Start()
     {
@@ -32,21 +25,8 @@ public class Ballmovement : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.CompareTag("Flagmove"))
-        {
-        // canMove=false; 
-        fm.Caller();
-        StartCoroutine(FreezeForDuration(5.0f));
-        Vector3 currentCoordinates = transform.position;
-        Debug.Log(currentCoordinates);
-        }
-        if (collider.gameObject.name=="magnet")
-        {
-            mg.isAttracting = true;
-        }
         if (collider.gameObject.CompareTag("Mirror"))
         {
-            Debug.Log("Mirror Touch");
             mirrorBallScript.ToggleDirection();
         }
         if (collider.gameObject.name == "Finish2")
@@ -68,7 +48,10 @@ public class Ballmovement : MonoBehaviour
         {
             mg.isAttracting = true;
         }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     }
     private void OnTriggerExit2D(Collider2D collider)
     {
@@ -84,10 +67,8 @@ public class Ballmovement : MonoBehaviour
         {
             fcolor2.ChangeFlagColor(Color.white);
             fcolor2.Ball2Entered = false;
-        }
-        if (collider.gameObject.name=="magnet")
-        {
-            mg.isAttracting = true;
+
+
         }
 
         if (collider.gameObject.name == "magnet")
@@ -95,11 +76,17 @@ public class Ballmovement : MonoBehaviour
             mg.isAttracting = false;
         }
 
+<<<<<<< Updated upstream
+        if (collider.gameObject.name == "magnet")
+        {
+            mg.isAttracting = false;
+        }
+=======
+>>>>>>> Stashed changes
+
     }
     public void Update()
     {
-        if(!isFrozen)
-        {
         horizontal = Input.GetAxisRaw("Horizontal");
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
@@ -108,7 +95,6 @@ public class Ballmovement : MonoBehaviour
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f * Time.deltaTime);
-        }
         }
     }
     public void FixedUpdate()
@@ -121,14 +107,5 @@ public class Ballmovement : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundlayer);
     }
 
-   IEnumerator FreezeForDuration(float duration)
-    {
-        isFrozen = true;
-
-        // Wait for the specified duration
-        yield return new WaitForSeconds(duration);
-
-        isFrozen = false;
-    }
     
 }

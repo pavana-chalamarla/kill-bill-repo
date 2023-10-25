@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14158899, g: 0.32530496, b: 0.36611533, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -722,7 +722,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+<<<<<<< Updated upstream
   m_Color: {r: 0.9716981, g: 0.05958529, b: 0.05958529, a: 1}
+=======
+  m_Color: {r: 0.048949808, g: 0.8671098, b: 0.9433962, a: 1}
+>>>>>>> Stashed changes
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -784,12 +788,8 @@ MonoBehaviour:
     m_Bits: 64
   mirrorBallScript: {fileID: 0}
   fcolor1: {fileID: 827157622}
-  fcolor2: {fileID: 1230238173}
-  isFrozen: 0
-  flag: 0
-  fm: {fileID: 0}
-  moveSpeed: 5
   mg: {fileID: 0}
+  fcolor2: {fileID: 1230238173}
 --- !u!1 &297505916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,7 +1077,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+<<<<<<< Updated upstream
   m_Color: {r: 0, g: 0.9716981, b: 0.8038785, a: 1}
+=======
+  m_Color: {r: 0.9137255, g: 0.59806806, b: 0.066666685, a: 1}
+>>>>>>> Stashed changes
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1160,12 +1164,8 @@ MonoBehaviour:
     m_Bits: 64
   mirrorBallScript: {fileID: 0}
   fcolor1: {fileID: 827157622}
-  fcolor2: {fileID: 1230238173}
-  isFrozen: 0
-  flag: 0
-  fm: {fileID: 0}
-  moveSpeed: 5
   mg: {fileID: 0}
+  fcolor2: {fileID: 1230238173}
 --- !u!1 &527011581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,8 +1680,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827157617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.2, y: 3.51, z: 0}
-  m_LocalScale: {x: 0.76822543, y: 6.4179854, z: 1}
+  m_LocalPosition: {x: 6.3584, y: 1.6455, z: 0}
+  m_LocalScale: {x: 0.8294827, y: 1.4002761, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1700,6 +1700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalColor: {r: 0, g: 0, b: 0, a: 0}
+  ball2Zone: {fileID: 1230238173}
 --- !u!1 &898832684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,6 +1922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalColor: {r: 0, g: 0, b: 0, a: 0}
+  ball2Zone: {fileID: 0}
 --- !u!1 &982949186
 GameObject:
   m_ObjectHideFlags: 0
@@ -2389,8 +2391,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230238168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.92, y: -7.28, z: 0}
-  m_LocalScale: {x: 0.7682254, y: 6.417985, z: 1}
+  m_LocalPosition: {x: -7.7294, y: -5.2465, z: 0}
+  m_LocalScale: {x: 0.81065625, y: 2.3508654, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2409,6 +2411,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalColor: {r: 0, g: 0, b: 0, a: 0}
+  ball1Zone: {fileID: 827157622}
+--- !u!1 &1235165867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1235165869}
+  - component: {fileID: 1235165868}
+  m_Layer: 0
+  m_Name: AnalyticsObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1235165868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235165867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93858d5063f5841a5b41a97d6845f96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1235165869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235165867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1816693179
 GameObject:
   m_ObjectHideFlags: 0
@@ -2468,7 +2515,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+<<<<<<< Updated upstream
   m_Color: {r: 0.9716981, g: 0.05958529, b: 0.05958529, a: 1}
+=======
+  m_Color: {r: 0.047058824, g: 0.8666667, b: 0.94509804, a: 1}
+>>>>>>> Stashed changes
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
