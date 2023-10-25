@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels.unity
     guid: 65aa2d67a91ac47af880e991fd4d7069
+  - enabled: 1
+    path: Assets/Scenes/Falling spike.unity
+    guid: ea92856378eeb4adcaa2946eef4caf66
   - enabled: 0
     path: Assets/Scenes/Level-i.unity
     guid: 2cda990e2423bbf4892e6590ba056729
