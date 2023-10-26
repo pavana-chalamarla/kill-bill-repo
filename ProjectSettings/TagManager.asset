@@ -4,28 +4,21 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Mirror
-  - Block
   - TopFlag
   - BottomFlag
-<<<<<<< HEAD
+  - Block
+  - Mirror
   - Enemy
   - Ground
-  - Flagmove
-=======
-  - Ball1
-  - Ball2
-  - Wall
->>>>>>> 23831bb74a7faf8c58badd8c84e37dc3a86f014b
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - Ground
-  - Finish
+  - 
+  - 
   - 
   - 
   - 

@@ -6,11 +6,6 @@ public class MagneicObj : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform ball;
-<<<<<<< HEAD
-    public float attractionSpeed = 1f;
-    public bool isAttracting = false;
-
-=======
     public float speed = 1f;
     private float minDistance = 0.0f; // you can adjust this value as needed
 
@@ -19,22 +14,11 @@ public class MagneicObj : MonoBehaviour
     private bool hasReachedTarget = false;
 
     private Vector3 directionToTarget;
->>>>>>> 23831bb74a7faf8c58badd8c84e37dc3a86f014b
     // Update is called once per frame
     void Update()
     {
         if (isAttracting)
         {
-<<<<<<< HEAD
-
-            Vector3 newPosition = transform.position;
-            newPosition.x = Mathf.MoveTowards(transform.position.x, ball.position.x, attractionSpeed * Time.deltaTime);
-            transform.position = newPosition;
-            //transform.position = Vector3.MoveTowards(transform.position, ball.position, attractionSpeed * Time.deltaTime);
-        }
-    }
-}
-=======
             Debug.Log("Target assigned.");
 
             //  Vector3 newPosition = transform.position;
@@ -112,4 +96,3 @@ public class MagneicObj : MonoBehaviour
 
 
 
->>>>>>> 23831bb74a7faf8c58badd8c84e37dc3a86f014b
