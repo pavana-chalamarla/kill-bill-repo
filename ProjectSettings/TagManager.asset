@@ -4,19 +4,21 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Mirror
-  - Block
   - TopFlag
   - BottomFlag
+  - Block
+  - Mirror
+  - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - Ground
-  - Finish
+  - 
+  - 
   - 
   - 
   - 

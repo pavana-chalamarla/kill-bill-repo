@@ -15,7 +15,7 @@ public class Ballmovement : MonoBehaviour
     public Ball1TriggerZone fcolor1;
     public MagneicObj mg;
     public Ball2TriggerZone fcolor2;
-    // Start is called before the first frame update
+
 
     public void Start()
     {
@@ -48,7 +48,6 @@ public class Ballmovement : MonoBehaviour
         {
             mg.isAttracting = true;
         }
-
     }
     private void OnTriggerExit2D(Collider2D collider)
     {
@@ -73,6 +72,7 @@ public class Ballmovement : MonoBehaviour
             mg.isAttracting = false;
         }
 
+
     }
     public void Update()
     {
@@ -95,4 +95,6 @@ public class Ballmovement : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundlayer);
     }
+
+    
 }

@@ -54,9 +54,9 @@ public class Analytics : MonoBehaviour
         return saveObject.restarts;
     }
 
-    public void RecordSingleFlags(bool ball1Entered, bool ball2Entered)
+    public void RecordSingleFlags(bool ball1, bool ball2)
     {
-        if ((ball1Entered && !ball2Entered))
+        if ((ball1 && !ball2))
         {
             saveObject.singleFlag++;
         }
