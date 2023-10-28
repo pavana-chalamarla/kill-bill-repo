@@ -42,7 +42,21 @@ public class Ballmovement : MonoBehaviour
             fcolor1.CheckCollisions();
 
         }
+<<<<<<< Updated upstream
        
+=======
+
+        if (collider.gameObject.name=="magnet")
+        {
+            mg.isAttracting = true;
+        }
+        if (collider.gameObject.name =="chain")
+        {
+            mirrorBallScript.s();
+        }
+      
+
+>>>>>>> Stashed changes
     }
     private void OnTriggerExit2D(Collider2D collider)
     {
