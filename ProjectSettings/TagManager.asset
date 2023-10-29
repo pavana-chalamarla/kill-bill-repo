@@ -8,6 +8,10 @@ TagManager:
   - Block
   - TopFlag
   - BottomFlag
+  - Enemy
+  - FxTemporaire
+  - PowerUp
+  - Powerup
   layers:
   - Default
   - TransparentFX
