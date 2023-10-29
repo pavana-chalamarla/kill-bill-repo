@@ -10,6 +10,7 @@ TagManager:
   - Mirror
   - Enemy
   - Ground
+  - Star
   layers:
   - Default
   - TransparentFX

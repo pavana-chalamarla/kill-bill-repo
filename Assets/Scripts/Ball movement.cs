@@ -15,7 +15,8 @@ public class Ballmovement : MonoBehaviour
     public Ball1TriggerZone fcolor1;
     public MagneicObj mg;
     public Ball2TriggerZone fcolor2;
-
+    public Star star;
+    private int starcount = 0;
 
     public void Start()
     {
@@ -48,6 +49,21 @@ public class Ballmovement : MonoBehaviour
         {
             mg.isAttracting = true;
         }
+
+       if(collider.gameObject.name=="star1"){
+            star.activateblue();
+       }
+       if(collider.gameObject.name=="star2"){
+            star.activatered();
+       }
+       if(collider.gameObject.name=="star3"){
+            star.activatefinish1();
+       }
+       if(collider.gameObject.name=="star4"){
+            star.activatefinish2();
+       }
+
+
     }
     private void OnTriggerExit2D(Collider2D collider)
     {
@@ -72,7 +88,6 @@ public class Ballmovement : MonoBehaviour
             mg.isAttracting = false;
         }
 
-
     }
     public void Update()
     {
@@ -95,6 +110,7 @@ public class Ballmovement : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundlayer);
     }
+
 
     
 }
