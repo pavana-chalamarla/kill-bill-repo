@@ -16,6 +16,7 @@ public class Ballmovement : MonoBehaviour
     public MagneicObj mg;
     public Ball2TriggerZone fcolor2;
     public Star star;
+    public Combiner combiner;
     private int starcount = 0;
 
     public void Start()
@@ -61,6 +62,10 @@ public class Ballmovement : MonoBehaviour
        }
        if(collider.gameObject.name=="star4"){
             star.activatefinish2();
+       }
+
+       if(collider.gameObject.CompareTag("Combiner")){
+          combiner.activateball();
        }
 
 

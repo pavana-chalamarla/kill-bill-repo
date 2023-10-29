@@ -37,9 +37,6 @@ public class Ball1TriggerZone : MonoBehaviour
         {
             Debug.Log("collision dtected");
 
-            //ChangeFlagColor(Color.green);
-           // ball1Entered = true;
-          //  CheckCollisions();
         }
     }
 

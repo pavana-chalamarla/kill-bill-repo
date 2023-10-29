@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - Ground
   - Star
+  - Combiner
   layers:
   - Default
   - TransparentFX
