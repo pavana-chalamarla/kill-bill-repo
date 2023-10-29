@@ -1312,7 +1312,7 @@ GameObject:
   - component: {fileID: 682123544}
   m_Layer: 0
   m_Name: small triangle blue
-  m_TagString: TopFlag
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2316,7 +2316,7 @@ GameObject:
   - component: {fileID: 1179249239}
   m_Layer: 0
   m_Name: triangle2
-  m_TagString: BottomFlag
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2435,6 +2435,7 @@ MonoBehaviour:
   mg: {fileID: 0}
   fcolor2: {fileID: 1230238173}
   star: {fileID: 1144191973}
+  combiner: {fileID: 0}
 --- !u!1 &1480605903
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,7 +2448,7 @@ GameObject:
   - component: {fileID: 1480605904}
   m_Layer: 0
   m_Name: triangle1
-  m_TagString: TopFlag
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3485,7 +3486,7 @@ GameObject:
   - component: {fileID: 2103621878}
   m_Layer: 0
   m_Name: small triangle red
-  m_TagString: TopFlag
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
