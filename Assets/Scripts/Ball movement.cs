@@ -13,8 +13,9 @@ public class Ballmovement : MonoBehaviour
     [SerializeField] public LayerMask groundlayer;
     public mirror mirrorBallScript;
     public Ball1TriggerZone fcolor1;
+    public MagneicObj mg;
     public Ball2TriggerZone fcolor2;
-    // Start is called before the first frame update
+
 
     public void Start()
     {
@@ -40,11 +41,9 @@ public class Ballmovement : MonoBehaviour
             fcolor1.ChangeFlagColor(Color.green);
             fcolor1.ball1Entered = true;
             fcolor1.CheckCollisions();
+            // Ball1.scale(0.5);
 
         }
-<<<<<<< Updated upstream
-       
-=======
 
         if (collider.gameObject.name=="magnet")
         {
@@ -56,7 +55,6 @@ public class Ballmovement : MonoBehaviour
         }
       
 
->>>>>>> Stashed changes
     }
     private void OnTriggerExit2D(Collider2D collider)
     {
@@ -75,6 +73,13 @@ public class Ballmovement : MonoBehaviour
 
 
         }
+
+        if (collider.gameObject.name == "magnet")
+        {
+            mg.isAttracting = false;
+        }
+
+
     }
     public void Update()
     {
@@ -97,4 +102,6 @@ public class Ballmovement : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundlayer);
     }
+
+    
 }
