@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Ball1TriggerZone : MonoBehaviour
 {
     public bool ball1Entered { get; set; } = false;
-    public Color originalColor; // Store the original color
+    public bool starcombinelevel = false;
     private GameObject flagObject;
     public Ball2TriggerZone ball2Zone;
     public Analytics aobj => Analytics.Instance;
@@ -82,4 +82,9 @@ public class Ball1TriggerZone : MonoBehaviour
         return this.ball1Entered;
     }
 
+    
+    
 }
+    
+
+

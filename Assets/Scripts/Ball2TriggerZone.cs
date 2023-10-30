@@ -7,7 +7,6 @@ public class Ball2TriggerZone : MonoBehaviour
 {
     public bool Ball2Entered { get; set; } = false;
     private GameObject flagObject;
-    public Color originalColor; // Store the original color
     public Ball1TriggerZone ball1Zone;
     public Analytics aobj => Analytics.Instance;
 
@@ -47,6 +46,8 @@ public class Ball2TriggerZone : MonoBehaviour
             Debug.Log("heyyy");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             aobj.Save();
+            
+            
         }
 
         
@@ -72,5 +73,6 @@ public class Ball2TriggerZone : MonoBehaviour
     public bool ballentered(){
         return this.Ball2Entered;
     }
+
 
 }

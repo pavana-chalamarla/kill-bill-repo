@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 72959844}
   - component: {fileID: 72959843}
   - component: {fileID: 72959845}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572634461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.918, y: 0.1408, z: 0}
+  m_LocalPosition: {x: 5.97, y: 1.93, z: 0}
   m_LocalScale: {x: 1.3017136, y: 2.161595, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -912,7 +912,7 @@ MonoBehaviour:
   groundCheck: {fileID: 971430481}
   groundlayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
 --- !u!50 &971430485
 Rigidbody2D:
   serializedVersion: 4

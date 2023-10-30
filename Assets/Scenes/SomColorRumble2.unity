@@ -2670,6 +2670,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1674982976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1262818870119772213, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
+  m_PrefabInstance: {fileID: 2072664393959745257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1674982983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674982976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde8fb5a9b21746ca93a3494dfaf557a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalBall: {fileID: 519796727}
+  mirrorBallMovement: {fileID: 0}
 --- !u!1 &1683511659
 GameObject:
   m_ObjectHideFlags: 0
@@ -3740,17 +3759,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4416190171042006786, guid: 7fc588bdb32d8447484f3daf0766d05c, type: 3}
   m_PrefabInstance: {fileID: 2104700590}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2112155800 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3996037559473580563, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
-  m_PrefabInstance: {fileID: 2072664393959745257}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cde8fb5a9b21746ca93a3494dfaf557a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2127983985
 GameObject:
   m_ObjectHideFlags: 0
@@ -4060,7 +4068,7 @@ PrefabInstance:
     - target: {fileID: 839966900093292402, guid: 45026b185f2e14d4dbde880bcf6224b0, type: 3}
       propertyPath: mirrorBallScript
       value: 
-      objectReference: {fileID: 2112155800}
+      objectReference: {fileID: 1674982983}
     - target: {fileID: 3165313177203561654, guid: 45026b185f2e14d4dbde880bcf6224b0, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -4134,6 +4142,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 362788956625691362, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1262818870119772213, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
       propertyPath: m_Name
       value: Ball2
@@ -4225,5 +4237,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1262818870119772213, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1674982983}
   m_SourcePrefab: {fileID: 100100000, guid: 6b81c658a8240424c91ad514a1916603, type: 3}

@@ -2434,6 +2434,7 @@ MonoBehaviour:
   fcolor1: {fileID: 827157622}
   mg: {fileID: 0}
   fcolor2: {fileID: 1230238173}
+  colorRumble: {fileID: 0}
   star: {fileID: 1144191973}
   combiner: {fileID: 0}
 --- !u!1 &1480605903
@@ -2577,7 +2578,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 0.972549, g: 0.05882353, b: 0.05882353, a: 1}
   m_FlipX: 0

@@ -22,7 +22,7 @@ public class ColorRumble : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No 'isCollided' script found on " + obj.name);
+            Debug.Log("No 'isCollided' script found on " + obj.name);
         }
         CheckAlignments();
     }
@@ -38,7 +38,7 @@ public class ColorRumble : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No 'isCollided' script found on " + obj.name);
+            Debug.Log("No 'isCollided' script found on " + obj.name);
         }
 
     }
@@ -64,7 +64,7 @@ public class ColorRumble : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogError("Flag at index " + i + " is null.");
+                    Debug.Log("Flag at index " + i + " is null.");
                 }
             }
             if (alignments==0){

@@ -23,7 +23,6 @@ public class Combiner : MonoBehaviour
             Rigidbody2D myRigidbody = objectToActivate.GetComponent<Rigidbody2D>();
 
 
-
             if (spriteRenderer != null)
             {
                 if (!spriteRenderer.enabled)

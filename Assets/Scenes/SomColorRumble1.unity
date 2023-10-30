@@ -2809,65 +2809,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 3}
   m_EdgeRadius: 0
---- !u!4 &1896179044 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4416190171042006786, guid: 7fc588bdb32d8447484f3daf0766d05c, type: 3}
-  m_PrefabInstance: {fileID: 1896179040}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2003875630
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2003875632}
-  - component: {fileID: 2003875631}
-  m_Layer: 0
-  m_Name: TutorialObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2003875631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003875630}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 287076a7f8bf1442cb4d8a375b15fa49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  focusPoints:
-  - {fileID: 2104700594}
-  - {fileID: 1534221650}
-  - {fileID: 1896179044}
-  - {fileID: 773466208}
-  - {fileID: 2133053200}
-  - {fileID: 1076889735}
-  originalPosition: {fileID: 1890820461}
-  focusTime: 1
-  transitionSpeed: 0.8
---- !u!4 &2003875632
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003875630}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2051009287
 GameObject:
   m_ObjectHideFlags: 0
@@ -3279,11 +3220,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 3}
   m_EdgeRadius: 0
---- !u!4 &2104700594 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4416190171042006786, guid: 7fc588bdb32d8447484f3daf0766d05c, type: 3}
-  m_PrefabInstance: {fileID: 2104700590}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2133053196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3435,11 +3371,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 3}
   m_EdgeRadius: 0
---- !u!4 &2133053200 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4416190171042006786, guid: 7fc588bdb32d8447484f3daf0766d05c, type: 3}
-  m_PrefabInstance: {fileID: 2133053196}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &647405223802942263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3621,6 +3552,10 @@ PrefabInstance:
       propertyPath: colorRumble
       value: 
       objectReference: {fileID: 781399000}
+    - target: {fileID: 4673420013477971356, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
+      propertyPath: groundlayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
