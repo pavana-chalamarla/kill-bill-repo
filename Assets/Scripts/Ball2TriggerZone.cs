@@ -53,13 +53,22 @@ public class Ball2TriggerZone : MonoBehaviour
 
     }
 
-    public void ChangeFlagColor(Color color)
+   public void ChangeFlagColor(string hexColor)
+{
+    if (flagObject != null)
     {
-        if (flagObject != null)
+        Color color;
+        if (ColorUtility.TryParseHtmlString(hexColor, out color))
         {
             flagObject.GetComponent<SpriteRenderer>().color = color;
         }
+        else
+        {
+            Debug.LogError("Invalid hexadecimal color string: " + hexColor);
+        }
     }
+}
+
     public bool ballentered(){
         return this.Ball2Entered;
     }

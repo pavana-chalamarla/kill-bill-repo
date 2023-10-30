@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mirror : MonoBehaviour
+public class MirrorScript : MonoBehaviour
 {
     //private float horizontal;
     //private float speed = 100f;

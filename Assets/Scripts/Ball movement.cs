@@ -15,7 +15,9 @@ public class Ballmovement : MonoBehaviour
     public Ball1TriggerZone fcolor1;
     public MagneicObj mg;
     public Ball2TriggerZone fcolor2;
-
+    public Star star;
+    public Combiner combiner;
+    private int starcount = 0;
 
     public void Start()
     {
@@ -31,17 +33,16 @@ public class Ballmovement : MonoBehaviour
         }
         if (collider.gameObject.name == "Finish2")
         {
-            fcolor2.ChangeFlagColor(Color.green);
+            fcolor2.ChangeFlagColor("#00FF00");
             fcolor2.Ball2Entered = true;
             fcolor2.CheckCollisions();
 //2
         }
         if (collider.gameObject.name == "Finish1")
         {
-            fcolor1.ChangeFlagColor(Color.green);
+            fcolor1.ChangeFlagColor("#00FF00");
             fcolor1.ball1Entered = true;
             fcolor1.CheckCollisions();
-            // Ball1.scale(0.5);
 
         }
 
@@ -49,11 +50,24 @@ public class Ballmovement : MonoBehaviour
         {
             mg.isAttracting = true;
         }
-        if (collider.gameObject.name =="chain")
-        {
-            mirrorBallScript.s();
-        }
-      
+
+       if(collider.gameObject.name=="star1"){
+            star.activateblue();
+       }
+       if(collider.gameObject.name=="star2"){
+            star.activatered();
+       }
+       if(collider.gameObject.name=="star3"){
+            star.activatefinish1();
+       }
+       if(collider.gameObject.name=="star4"){
+            star.activatefinish2();
+       }
+
+       if(collider.gameObject.CompareTag("Combiner")){
+          combiner.activateball();
+       }
+
 
     }
     private void OnTriggerExit2D(Collider2D collider)
@@ -61,14 +75,14 @@ public class Ballmovement : MonoBehaviour
 
         if (collider.gameObject.name == "Finish1")
         {
-            fcolor1.ChangeFlagColor(Color.white);
+            fcolor1.ChangeFlagColor("#00F8CD");
             fcolor1.ball1Entered = false;
 
 
         }
         if (collider.gameObject.name == "Finish2")
         {
-            fcolor2.ChangeFlagColor(Color.white);
+            fcolor2.ChangeFlagColor("#F80F0F");
             fcolor2.Ball2Entered = false;
 
 
@@ -78,7 +92,6 @@ public class Ballmovement : MonoBehaviour
         {
             mg.isAttracting = false;
         }
-
 
     }
     public void Update()
@@ -102,6 +115,7 @@ public class Ballmovement : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundlayer);
     }
+
 
     
 }
