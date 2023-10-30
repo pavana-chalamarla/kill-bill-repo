@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 111926166}
   - component: {fileID: 111926165}
   - component: {fileID: 111926164}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Square (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 297505919}
   - component: {fileID: 297505918}
   - component: {fileID: 297505917}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Square (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1465,6 +1465,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837034d1a23f44b1f92c14c9dd5c3e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ball1Entered>k__BackingField: 0
+  originalColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  flagObject: {fileID: 0}
+  ball2Zone: {fileID: 0}
 --- !u!1 &982949186
 GameObject:
   m_ObjectHideFlags: 0
@@ -2523,10 +2531,6 @@ PrefabInstance:
       propertyPath: fcolor2
       value: 
       objectReference: {fileID: 1230238173}
-    - target: {fileID: 4673420013477971356, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
-      propertyPath: groundlayer.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -3489,7 +3489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontal: 0
-  speed: 100
+  speed: 300
   jump: 16
   isFacingRight: 1
   rb: {fileID: 1932950016}
@@ -3762,7 +3762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontal: 0
-  speed: 100
+  speed: 300
   jump: 16
   isFacingRight: 1
   rb: {fileID: 2064182629}

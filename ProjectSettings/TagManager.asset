@@ -10,8 +10,7 @@ TagManager:
   - Mirror
   - Enemy
   - Ground
-  - Star
-  - Combiner
+  - PowerUp
   layers:
   - Default
   - TransparentFX

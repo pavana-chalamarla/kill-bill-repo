@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3229515937083435280}
   - component: {fileID: 2734024491149325451}
   - component: {fileID: 8296951912062813825}
+  - component: {fileID: 3996037559473580563}
   - component: {fileID: 4673420013477971356}
-  - component: {fileID: 362788956625691362}
   m_Layer: 0
   m_Name: Ball2
   m_TagString: Player
@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.085}
 --- !u!212 &3229515937083435280
 SpriteRenderer:
@@ -150,6 +150,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.50000006
+--- !u!114 &3996037559473580563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262818870119772213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde8fb5a9b21746ca93a3494dfaf557a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalBall: {fileID: 0}
+  mirrorBallMovement: {fileID: 0}
 --- !u!114 &4673420013477971356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,17 +189,3 @@ MonoBehaviour:
   fcolor1: {fileID: 0}
   mg: {fileID: 0}
   fcolor2: {fileID: 0}
---- !u!114 &362788956625691362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262818870119772213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f526fa2ba1a44eef8b24eb5eac446e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  originalBall: {fileID: 4240208893768812031}
-  mirrorBallMovement: {fileID: 0}

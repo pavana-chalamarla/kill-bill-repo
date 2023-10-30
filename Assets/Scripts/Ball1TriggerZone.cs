@@ -37,6 +37,9 @@ public class Ball1TriggerZone : MonoBehaviour
         {
             Debug.Log("collision dtected");
 
+            //ChangeFlagColor(Color.green);
+           // ball1Entered = true;
+          //  CheckCollisions();
         }
     }
 
@@ -61,22 +64,13 @@ public class Ball1TriggerZone : MonoBehaviour
         }
     }
 
-   public void ChangeFlagColor(string hexColor)
-{
-    if (flagObject != null)
+    public void ChangeFlagColor(Color color)
     {
-        Color color;
-        if (ColorUtility.TryParseHtmlString(hexColor, out color))
+        if (flagObject != null)
         {
             flagObject.GetComponent<SpriteRenderer>().color = color;
         }
-        else
-        {
-            Debug.LogError("Invalid hexadecimal color string: " + hexColor);
-        }
     }
-}
-
 
     public bool ballentered(){
         return this.ball1Entered;
