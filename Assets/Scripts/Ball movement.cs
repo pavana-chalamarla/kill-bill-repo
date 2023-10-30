@@ -15,6 +15,7 @@ public class Ballmovement : MonoBehaviour
     public Ball1TriggerZone fcolor1;
     public MagneicObj mg;
     public Ball2TriggerZone fcolor2;
+    public ColorRumble colorRumble;
 
 
     public void Start()
@@ -48,6 +49,11 @@ public class Ballmovement : MonoBehaviour
         {
             mg.isAttracting = true;
         }
+
+        if  (collider.gameObject.tag == "ColorFlag"){
+            Debug.Log("color flag collisiom");
+            colorRumble.setTrue(collider.gameObject);
+        }
     }
     private void OnTriggerExit2D(Collider2D collider)
     {
@@ -70,6 +76,11 @@ public class Ballmovement : MonoBehaviour
         if (collider.gameObject.name == "magnet")
         {
             mg.isAttracting = false;
+        }
+
+
+        if  (collider.gameObject.tag == "ColorFlag"){
+            colorRumble.setFalse(collider.gameObject);
         }
 
 
