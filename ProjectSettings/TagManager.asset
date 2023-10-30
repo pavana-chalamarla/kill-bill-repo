@@ -10,7 +10,12 @@ TagManager:
   - Mirror
   - Enemy
   - Ground
+<<<<<<< HEAD
   - ColorFlag
+=======
+  - Star
+  - Combiner
+>>>>>>> main
   layers:
   - Default
   - TransparentFX

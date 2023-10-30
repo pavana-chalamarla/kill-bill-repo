@@ -839,6 +839,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &429401698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1262818870119772213, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
+  m_PrefabInstance: {fileID: 2072664393959745257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &429401705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429401698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f526fa2ba1a44eef8b24eb5eac446e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalBall: {fileID: 519796727}
+  mirrorBallMovement: {fileID: 0}
 --- !u!4 &519796727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7228743433270946871, guid: 45026b185f2e14d4dbde880bcf6224b0, type: 3}
@@ -2722,10 +2741,14 @@ PrefabInstance:
       propertyPath: fcolor2
       value: 
       objectReference: {fileID: 1230238173}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3996037559473580563, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1262818870119772213, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 429401705}
   m_SourcePrefab: {fileID: 100100000, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
 --- !u!1001 &3567366400103399226
 PrefabInstance:
