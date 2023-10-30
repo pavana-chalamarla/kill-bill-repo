@@ -11,6 +11,7 @@ public class BigBall : MonoBehaviour
     public float speed = 100f;
     public float jump = 16f;
     public bool isFacingRight = true;
+    private GameObject flagObject;
     [SerializeField] public Rigidbody2D rb;
     [SerializeField] public Transform groundCheck;
     [SerializeField] public LayerMask groundlayer;
@@ -22,6 +23,8 @@ public class BigBall : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.gameObject.name=="Finish"){
+            flagObject = GameObject.Find("Triangle");
+            ChangeFlagColor("#00FF00");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             aobj.Save();
         }
@@ -30,7 +33,7 @@ public class BigBall : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collider)
     {
         if(collider.gameObject.name=="Finish"){
-
+            ChangeFlagColor("#F8E600");
         }
     }
 
@@ -55,5 +58,21 @@ public class BigBall : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundlayer);
     }
+
+    public void ChangeFlagColor(string hexColor)
+{
+    if (flagObject != null)
+    {
+        Color color;
+        if (ColorUtility.TryParseHtmlString(hexColor, out color))
+        {
+            flagObject.GetComponent<SpriteRenderer>().color = color;
+        }
+        else
+        {
+            Debug.LogError("Invalid hexadecimal color string: " + hexColor);
+        }
+    }
+}
 
 }

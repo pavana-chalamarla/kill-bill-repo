@@ -46,6 +46,11 @@ public class Ballmovement : MonoBehaviour
 
         }
 
+        if (collider.gameObject.name =="chain")
+        {
+            mirrorBallScript.s();
+        }
+
         if (collider.gameObject.name=="magnet")
         {
             mg.isAttracting = true;
