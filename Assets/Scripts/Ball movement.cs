@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ballmovement : MonoBehaviour
 {
     public float horizontal;
-    public float speed = 250f;
+    public float speed = 249f;
     public float jump = 16f;
     public bool isFacingRight = true;
     [SerializeField] public Rigidbody2D rb;
