@@ -6,11 +6,11 @@ TagManager:
   tags:
   - TopFlag
   - BottomFlag
-  - Block
-  - Mirror
-  - Enemy
+  - Combiner
+  - Star
   - Ground
-  - PowerUp
+  - Mirror
+  - ColorFlag
   layers:
   - Default
   - TransparentFX

@@ -39,4 +39,9 @@ public class PlayerManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         Debug.Log("Mainmenu");
     }
+     public void levels()
+    {
+        SceneManager.LoadScene("Levels");
+       
+    }
 }

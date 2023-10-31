@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Ball1TriggerZone : MonoBehaviour
 {
     public bool ball1Entered { get; set; } = false;
-    public Color originalColor; // Store the original color
+    public bool starcombinelevel = false;
     private GameObject flagObject;
     public Ball2TriggerZone ball2Zone;
     public Analytics aobj => Analytics.Instance;
@@ -37,9 +37,6 @@ public class Ball1TriggerZone : MonoBehaviour
         {
             Debug.Log("collision dtected");
 
-            //ChangeFlagColor(Color.green);
-           // ball1Entered = true;
-          //  CheckCollisions();
         }
     }
 
@@ -64,16 +61,30 @@ public class Ball1TriggerZone : MonoBehaviour
         }
     }
 
-    public void ChangeFlagColor(Color color)
+   public void ChangeFlagColor(string hexColor)
+{
+    if (flagObject != null)
     {
-        if (flagObject != null)
+        Color color;
+        if (ColorUtility.TryParseHtmlString(hexColor, out color))
         {
             flagObject.GetComponent<SpriteRenderer>().color = color;
         }
+        else
+        {
+            Debug.LogError("Invalid hexadecimal color string: " + hexColor);
+        }
     }
+}
+
 
     public bool ballentered(){
         return this.ball1Entered;
     }
 
+    
+    
 }
+    
+
+
