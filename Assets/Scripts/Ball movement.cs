@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ballmovement : MonoBehaviour
 {
     public float horizontal;
-    public float speed = 100f;
+    public float speed = 250f;
     public float jump = 16f;
     public bool isFacingRight = true;
     [SerializeField] public Rigidbody2D rb;
@@ -51,6 +51,7 @@ public class Ballmovement : MonoBehaviour
         if (collider.gameObject.name =="chain")
         {
             mirrorBallScript.s();
+            collider.gameObject.SetActive(false);
         }
 
         if (collider.gameObject.name=="magnet")

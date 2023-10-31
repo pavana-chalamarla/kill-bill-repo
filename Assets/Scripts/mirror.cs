@@ -61,6 +61,7 @@ public class mirror : MonoBehaviour
     public void s()
     {
         stop =0;
+        
         // rb.isKinematic = true;
     }
     
