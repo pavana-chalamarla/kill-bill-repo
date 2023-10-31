@@ -4,23 +4,22 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Mirror
-  - Block
   - TopFlag
   - BottomFlag
-  - Enemy
-  - FxTemporaire
-  - PowerUp
-  - Powerup
+  - Combiner
+  - Star
+  - Ground
+  - Mirror
+  - ColorFlag
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - Ground
-  - Finish
+  - 
+  - 
   - 
   - 
   - 

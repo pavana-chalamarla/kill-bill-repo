@@ -17,6 +17,9 @@ public class mirror : MonoBehaviour
     private Transform mirrorTransform;
     public Ballmovement mirrorBallMovement;
     private bool shouldReverse = true;
+    private Rigidbody rb;
+    int stop=1;
+  
 
 
     void Awake()
@@ -33,7 +36,8 @@ public class mirror : MonoBehaviour
     void LateUpdate()
     {
         float directionMultiplier = shouldReverse ? -1 : 1;
-        float horizontal = directionMultiplier * originalBall.GetComponent<Ballmovement>().horizontal;
+        
+        float horizontal = stop*directionMultiplier * originalBall.GetComponent<Ballmovement>().horizontal;
         mirrorBallMovement.horizontal = horizontal;
 
         // Mirror the jump movement (opposite jump)
@@ -54,4 +58,11 @@ public class mirror : MonoBehaviour
         LateUpdate();
 
     }
+    public void s()
+    {
+        stop =0;
+        
+        // rb.isKinematic = true;
+    }
+    
 }

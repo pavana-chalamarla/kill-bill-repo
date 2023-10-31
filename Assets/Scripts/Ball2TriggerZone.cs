@@ -7,7 +7,8 @@ public class Ball2TriggerZone : MonoBehaviour
 {
     public bool Ball2Entered { get; set; } = false;
     private GameObject flagObject;
-    public Color originalColor; // Store the original color
+    public Ball1TriggerZone ball1Zone;
+    public Analytics aobj => Analytics.Instance;
 
     private void Start()
     {
@@ -23,9 +24,7 @@ public class Ball2TriggerZone : MonoBehaviour
     {
         if (other.gameObject.name == "Ball2")
         {
-            //ChangeFlagColor(Color.green);
-            //Ball2Entered = true;
-            CheckCollisions();
+           // CheckCollisions();
         }
     }
 
@@ -33,29 +32,47 @@ public class Ball2TriggerZone : MonoBehaviour
     {
         if (other.gameObject.name == "Ball2")
         {
-            //ChangeFlagColor(originalColor);
-            //Ball2Entered = false;
+            
         }
     }
 
     public void CheckCollisions()
     {
-        // Find the Ball1TriggerZone GameObject
-        Ball1TriggerZone ball1Zone = FindObjectOfType<Ball1TriggerZone>();
 
-        if (ball1Zone != null && Ball2Entered && ball1Zone.ball1Entered)
-        {//1
+       bool b2 = Ball2Entered;
+       bool b1 = ball1Zone.ballentered();
+
+        if(b1!=null && b2!=null && b1 && b2){
+            Debug.Log("heyyy");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            aobj.Save();
+            
+            
         }
+
+        
+
     }
 
-    public void ChangeFlagColor(Color color)
+   public void ChangeFlagColor(string hexColor)
+{
+    if (flagObject != null)
     {
-        if (flagObject != null)
+        Color color;
+        if (ColorUtility.TryParseHtmlString(hexColor, out color))
         {
             flagObject.GetComponent<SpriteRenderer>().color = color;
         }
+        else
+        {
+            Debug.LogError("Invalid hexadecimal color string: " + hexColor);
+        }
     }
-    
+}
+
+    public bool ballentered(){
+        return this.Ball2Entered;
+    }
+
 
 }
