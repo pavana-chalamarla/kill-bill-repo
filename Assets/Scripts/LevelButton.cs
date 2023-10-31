@@ -5,17 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class LevelButton : MonoBehaviour
 {
-    private void Update()
+    // Start is called before the first frame update
+    void Start()
     {
-        if (Input.GetMouseButtonDown(0)) // 0 corresponds to the left mouse button
-        {
-            ReturnToMenu();
-        }
+        
     }
 
-    public void ReturnToMenu()
+    // Update is called once per frame
+    private void Update()
     {
+        
+    }
+    private void OnMouseDown()
+    {
+        
+        Debug.Log("Hello");
         SceneManager.LoadScene("Levels");
     }
+
 }
 
