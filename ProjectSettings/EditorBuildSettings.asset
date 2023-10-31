@@ -6,6 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< Updated upstream
     path: Assets/Scenes/Level 1 final.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -23,6 +24,52 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/magnet basic level.unity
     guid: aa7fc8932fff54c81b4cf5f6dc6c5baa
+=======
+    path: Assets/Scenes/lvl-i.unity
+    guid: dfd6f05b71c15465bb0ec8961b6dfd9f
+  - enabled: 1
+    path: Assets/Scenes/lvl-ii.unity
+    guid: 9aabcbd7d8b7e466b9d5756baeb1f96c
+  - enabled: 1
+    path: Assets/Scenes/lvl-iii.unity
+    guid: 8d37071c0c7f54d7080ba2540aa3f0c4
+  - enabled: 1
+    path: Assets/Scenes/lvl-iv.unity
+    guid: 0d3266a9327e14aa4a895767457f7cb0
+  - enabled: 1
+    path: Assets/Scenes/lvl-v.unity
+    guid: aa7fc8932fff54c81b4cf5f6dc6c5baa
+  - enabled: 1
+    path: Assets/Scenes/lvl-vi.unity
+    guid: c17b2dc6ad0764a84b9746cd201b81cf
+  - enabled: 1
+    path: Assets/Scenes/lvl-viiii.unity
+    guid: 9728668dbb586472d8d950a285c198c3
+  - enabled: 1
+    path: Assets/Scenes/lvl-vii.unity
+    guid: 6ad3206e62bcb42bb8ce42653094fca5
+  - enabled: 1
+    path: Assets/Scenes/lvl-viii.unity
+    guid: 2cf108d9419e34bc690563a3f0ee6f2d
+  - enabled: 1
+    path: Assets/Scenes/lvl-ix.unity
+    guid: 73641447bd3974aadafb5f7a5ddd75b2
+  - enabled: 1
+    path: Assets/Scenes/lvl-x.unity
+    guid: 6f4fc989287e24d81a2428eb17155add
+  - enabled: 1
+    path: Assets/Scenes/lvl-xi.unity
+    guid: 8e5e36deec6f24add831c9b000878cb2
+  - enabled: 1
+    path: Assets/Scenes/lvl-xii.unity
+    guid: 4c64f3a296c6f4c51bbfc72cf0a5834f
+  - enabled: 1
+    path: Assets/Scenes/lvl-xv.unity
+    guid: 748daeabcb9754f18b2d0a1983b4cf9f
+  - enabled: 1
+    path: Assets/Scenes/lvl-xvi.unity
+    guid: cbdb6ff2e72f44876b37b1ed397b8026
+>>>>>>> Stashed changes
   - enabled: 1
     path: Assets/Scenes/End.unity
     guid: 2432faddbeea547418d66e2942d7738a

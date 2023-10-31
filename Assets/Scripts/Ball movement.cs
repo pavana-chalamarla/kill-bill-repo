@@ -53,7 +53,28 @@ public class Ballmovement : MonoBehaviour
         {
             mirrorBallScript.s();
         }
+<<<<<<< Updated upstream
       
+=======
+       if(collider.gameObject.name=="star1"){
+            star.activateblue();
+       }
+       if(collider.gameObject.name=="star2"){
+            star.activatered();
+       }
+       if(collider.gameObject.name=="star3"){
+            star.activatefinish1();
+       }
+       if(collider.gameObject.name=="star4"){
+            star.activatefinish2();
+       }
+
+       if(collider.gameObject.CompareTag("Combiner")){
+          combiner.activateball();
+       }
+       
+
+>>>>>>> Stashed changes
 
     }
     private void OnTriggerExit2D(Collider2D collider)
