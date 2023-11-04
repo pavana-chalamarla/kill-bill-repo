@@ -7,39 +7,68 @@ public class LevelsScript : MonoBehaviour
 {
     public void Level1()
     {
-        SceneManager.LoadScene("Level-1");
+        SceneManager.LoadScene("lvl1");
     }
     public void Level2()
     {
-        SceneManager.LoadScene("Level-2");
+        SceneManager.LoadScene("lvl2");
     }
     public void Level3()
     {
-        SceneManager.LoadScene("Level-3");
+        SceneManager.LoadScene("lvl3");
     }
     public void Level4()
     {
-        SceneManager.LoadScene("Level-4");
+        SceneManager.LoadScene("lvl4");
     }
  public void Level5()
     {
-        SceneManager.LoadScene("Level-5");
+        SceneManager.LoadScene("lvl5");
     }
 public void Level6()
     {
-        SceneManager.LoadScene("Level-6");
+        SceneManager.LoadScene("lvl6");
     }
 public void Level7()
     {
-        SceneManager.LoadScene("Level-7");
+        SceneManager.LoadScene("lvl7");
     }
 public void Level8()
     {
-        SceneManager.LoadScene("Level-8");
+        SceneManager.LoadScene("lvl8");
     }
 public void Level9()
     {
-        SceneManager.LoadScene("Level-9");
+        SceneManager.LoadScene("lvl9");
+    }
+
+    public void Level10()
+    {
+        SceneManager.LoadScene("lvl10");
+    }
+    public void Level11()
+    {
+        SceneManager.LoadScene("lvl11");
+    }
+ public void Level12()
+    {
+        SceneManager.LoadScene("lvl2");
+    }
+public void Level13()
+    {
+        SceneManager.LoadScene("lvl13");
+    }
+public void Level14()
+    {
+        SceneManager.LoadScene("lvl14");
+    }
+public void Level15()
+    {
+        SceneManager.LoadScene("lvl15");
+    }
+public void Level16()
+    {
+        SceneManager.LoadScene("lvl16");
     }
 
     // Start is called before the first frame update
