@@ -674,7 +674,7 @@ GameObject:
   - component: {fileID: 459964283}
   - component: {fileID: 459964282}
   - component: {fileID: 459964281}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Square (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1613,7 +1613,7 @@ GameObject:
   - component: {fileID: 982653486}
   - component: {fileID: 982653485}
   - component: {fileID: 982653484}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Square (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2745,7 +2745,7 @@ GameObject:
   - component: {fileID: 1852089659}
   - component: {fileID: 1852089658}
   - component: {fileID: 1852089660}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3098,7 +3098,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064061476}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cde8fb5a9b21746ca93a3494dfaf557a, type: 3}
   m_Name: 
@@ -3113,6 +3113,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 839966900093292402, guid: 45026b185f2e14d4dbde880bcf6224b0, type: 3}
+      propertyPath: jump
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 839966900093292402, guid: 45026b185f2e14d4dbde880bcf6224b0, type: 3}
       propertyPath: speed
       value: 225
@@ -3196,7 +3200,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 362788956625691362, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 362788956625691362, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
       propertyPath: originalBall
@@ -3282,6 +3286,10 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 1659492032}
+    - target: {fileID: 4673420013477971356, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
+      propertyPath: jump
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 4673420013477971356, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
       propertyPath: speed
       value: 225

@@ -6,7 +6,7 @@ public class Ballmovement : MonoBehaviour
 {
     public float horizontal;
     public float speed = 250f;
-    public float jump = 16f;
+    public float jump = 13f;
     public bool isFacingRight = true;
     [SerializeField] public Rigidbody2D rb;
     [SerializeField] public Transform groundCheck;
@@ -119,10 +119,10 @@ public class Ballmovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jump);
         }
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f * Time.deltaTime);
-        }
+        // if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        // {
+        //     rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f * Time.deltaTime);
+        // }
     }
     public void FixedUpdate()
     {

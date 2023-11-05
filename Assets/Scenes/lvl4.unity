@@ -1324,7 +1324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   speed: 100
-  jump: 16
+  jump: 12
   isFacingRight: 1
   rb: {fileID: 519796725}
   groundCheck: {fileID: 519796727}
