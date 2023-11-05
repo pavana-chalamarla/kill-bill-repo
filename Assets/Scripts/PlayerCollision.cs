@@ -15,13 +15,13 @@ public class PlayerCollision : MonoBehaviour
         threeQuarterSize = originalSize * 0.75f; // Set it to 3/4 of the original size
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Enemy")
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             PlayerManager.isGameOver = true;
         }
-        if (collision.transform.tag == "PowerUp")
+        if (collision.gameObject.CompareTag("PowerUp"))
         {
             if (isPowerupActive)
             {
