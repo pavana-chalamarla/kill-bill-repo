@@ -8,11 +8,15 @@ public class PlayerCollision : MonoBehaviour
     private Vector3 originalSize;
     private Vector3 threeQuarterSize;
 
+    public GameObject shrink;
+    public GameObject big;
+    
     private void Start()
     {
         // Store the original size of the object
         originalSize = transform.localScale;
         threeQuarterSize = originalSize * 0.75f; // Set it to 3/4 of the original size
+        big.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,21 +25,39 @@ public class PlayerCollision : MonoBehaviour
         {
             PlayerManager.isGameOver = true;
         }
-        if (collision.gameObject.CompareTag("PowerUp"))
+        if(collision.gameObject.CompareTag("PowerUp"))
         {
-            if (isPowerupActive)
-            {
+            if(!isPowerupActive){
+                // PowerUp was not there, so activate it
+               isPowerupActive = true;
+               ReduceSize();
+               shrink.SetActive(false);
+               big.SetActive(true);
+            }
+              else{
                 // PowerUp was already active, so deactivate it
                 isPowerupActive = false;
                 RestoreOriginalSize();
-            }
-            else
-            {
-                // PowerUp is touched for the first time, activate it
-                isPowerupActive = true;
-                ReduceSize();
-            }
+                big.SetActive(false);
+                shrink.SetActive(true);
+            } 
         }
+
+        
+
+
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "shrink")
+        {
+            //activateObject(big);
+        }
+
+        if (collision.gameObject.name=="big"){
+            //activateObject(shrink);
+        }
+        
     }
 
     private void ReduceSize()
@@ -46,5 +68,69 @@ public class PlayerCollision : MonoBehaviour
     private void RestoreOriginalSize()
     {
         transform.localScale = originalSize;
+    }
+    void activateObject(GameObject objectToActivate){
+        if (objectToActivate != null)
+        {
+            SpriteRenderer spriteRenderer = objectToActivate.GetComponent<SpriteRenderer>();
+            BoxCollider2D boxCollider = objectToActivate.GetComponent<BoxCollider2D>();
+            CircleCollider2D circleCollider = objectToActivate.GetComponent<CircleCollider2D>();
+
+            if (spriteRenderer != null)
+            {
+                if (!spriteRenderer.enabled)
+                {
+                    spriteRenderer.enabled = true;
+                }
+            }
+            if (boxCollider != null)
+            {
+                if (!boxCollider.enabled)
+                {
+                    boxCollider.enabled = true;
+                }
+            }
+            if (circleCollider != null)
+            {
+                if (!circleCollider.enabled)
+                {
+                    circleCollider.enabled = true;
+                }
+            }
+        }
+    }
+
+    void deactivateObject(GameObject objectToActivate){
+        if (objectToActivate != null)
+        {
+            SpriteRenderer spriteRenderer = objectToActivate.GetComponent<SpriteRenderer>();
+            BoxCollider2D boxCollider = objectToActivate.GetComponent<BoxCollider2D>();
+            CircleCollider2D circleCollider = objectToActivate.GetComponent<CircleCollider2D>();
+
+            if (spriteRenderer != null)
+            {
+                // Check if the SpriteRenderer is not active, and then activate it.
+                if (spriteRenderer.enabled)
+                {
+                    spriteRenderer.enabled = false;
+                }
+            }
+            if (boxCollider != null)
+            {
+                // Check if the SpriteRenderer is not active, and then activate it.
+                if (boxCollider.enabled)
+                {
+                    boxCollider.enabled = false;
+                }
+            }
+            if (circleCollider != null)
+            {
+                // Check if the SpriteRenderer is not active, and then activate it.
+                if (circleCollider.enabled)
+                {
+                    circleCollider.enabled = false;
+                }
+            }
+        }
     }
 }

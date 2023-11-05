@@ -13,6 +13,8 @@ TagManager:
   - ColorFlag
   - Block
   - Finish1
+  - PowerUp
+  - Enemy
   layers:
   - Default
   - TransparentFX
