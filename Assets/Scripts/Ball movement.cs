@@ -79,6 +79,11 @@ public class Ballmovement : MonoBehaviour
        if(collider.gameObject.CompareTag("Combiner")){
           combiner.activateball();
        }
+       if (collider.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("enemy");
+            PlayerManager.isGameOver = true;
+        }
 
 
     }
