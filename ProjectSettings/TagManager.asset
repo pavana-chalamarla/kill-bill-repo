@@ -11,6 +11,8 @@ TagManager:
   - Ground
   - Mirror
   - ColorFlag
+  - Block
+  - Finish1
   layers:
   - Default
   - TransparentFX
