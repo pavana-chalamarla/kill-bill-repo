@@ -70,6 +70,30 @@ public void Level16()
     {
         SceneManager.LoadScene("lvl16");
     }
+    public void Level17()
+    {
+        SceneManager.LoadScene("lvl16");
+    }public void Level18()
+    {
+        SceneManager.LoadScene("lvl16");
+    }public void Level19()
+    {
+        SceneManager.LoadScene("lvl16");
+    }public void Level20()
+    {
+        SceneManager.LoadScene("lvl16");
+    }public void Level21()
+    {
+        SceneManager.LoadScene("lvl16");
+    }public void Level22()
+    {
+        SceneManager.LoadScene("lvl16");
+    }
+    public void mainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+        Debug.Log("Mainmenu");
+    }
 
     // Start is called before the first frame update
     void Start()
