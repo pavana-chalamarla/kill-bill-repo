@@ -41,10 +41,7 @@ public class MirrorScript : MonoBehaviour
         {
             mirrorBallMovement.rb.velocity = new Vector2(mirrorBallMovement.rb.velocity.x, -mirrorBallMovement.jump);
         }
-        if (Input.GetButtonUp("Jump") && originalBall.GetComponent<Ballmovement>().rb.velocity.y > 0f)
-        {
-            mirrorBallMovement.rb.velocity = new Vector2(mirrorBallMovement.rb.velocity.x, -mirrorBallMovement.rb.velocity.y * 0.5f * Time.deltaTime);
-        }
+      
     }
 
     public void ToggleDirection()
