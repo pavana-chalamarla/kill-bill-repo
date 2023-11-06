@@ -948,7 +948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontal: 0
-  speed: 100
+  speed: 225
   jump: 16
   isFacingRight: 1
   rb: {fileID: 265957196}
@@ -1323,7 +1323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontal: 0
-  speed: 100
+  speed: 225
   jump: 12
   isFacingRight: 1
   rb: {fileID: 519796725}
@@ -2845,6 +2845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dca207ef6d0f40568a900195e730dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  starcombinelevel: 0
   ball1Zone: {fileID: 827157622}
 --- !u!1 &1428013257
 GameObject:

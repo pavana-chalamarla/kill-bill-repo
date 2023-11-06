@@ -52,7 +52,7 @@ public void Level9()
     }
  public void Level12()
     {
-        SceneManager.LoadScene("lvl2");
+        SceneManager.LoadScene("lvl12");
     }
 public void Level13()
     {
@@ -72,22 +72,22 @@ public void Level16()
     }
     public void Level17()
     {
-        SceneManager.LoadScene("lvl16");
+        SceneManager.LoadScene("lvl17");
     }public void Level18()
     {
-        SceneManager.LoadScene("lvl16");
+        SceneManager.LoadScene("lvl18");
     }public void Level19()
     {
-        SceneManager.LoadScene("lvl16");
+        SceneManager.LoadScene("lvl19");
     }public void Level20()
     {
-        SceneManager.LoadScene("lvl16");
+        SceneManager.LoadScene("lvl20");
     }public void Level21()
     {
-        SceneManager.LoadScene("lvl16");
+        SceneManager.LoadScene("lvl21");
     }public void Level22()
     {
-        SceneManager.LoadScene("lvl16");
+        SceneManager.LoadScene("lvl22");
     }
     public void mainMenu()
     {
