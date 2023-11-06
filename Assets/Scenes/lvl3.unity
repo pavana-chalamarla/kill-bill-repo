@@ -2254,7 +2254,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.50000006
+  m_Radius: 0.5
 --- !u!50 &723705367
 Rigidbody2D:
   serializedVersion: 4
@@ -2377,7 +2377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   speed: 225
-  jump: 16
+  jump: 13
   isFacingRight: 1
   rb: {fileID: 723705367}
   groundCheck: {fileID: 723705369}
@@ -6915,7 +6915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   speed: 225
-  jump: 16
+  jump: 13
   isFacingRight: 1
   rb: {fileID: 1879696792}
   groundCheck: {fileID: 1879696789}

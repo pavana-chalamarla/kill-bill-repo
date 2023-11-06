@@ -6,7 +6,7 @@ public class Ballmovement : MonoBehaviour
 {
     public float horizontal;
     public float speed = 250f;
-    public float jump = 16f;
+    public float jump = 13f;
     public bool isFacingRight = true;
     [SerializeField] public Rigidbody2D rb;
     [SerializeField] public Transform groundCheck;
@@ -33,13 +33,12 @@ public class Ballmovement : MonoBehaviour
         {
             mirrorBallScript.ToggleDirection();
         }
-        if (collider.gameObject.name == "Finish1" && gameObject.name == "Ball1")
-        {
-            fcolor1.ChangeFlagColor("#00FF00");
-            fcolor1.ball1Entered = true;
-            fcolor1.CheckCollisions();
 
+        if (collider.gameObject.CompareTag("Enemy"))
+        {
+            PlayerManager.isGameOver=true;
         }
+
         if (collider.gameObject.name == "Finish2" && gameObject.name == "Ball2")
         {
             fcolor2.ChangeFlagColor("#00FF00");
@@ -47,12 +46,19 @@ public class Ballmovement : MonoBehaviour
             fcolor2.CheckCollisions();
 //2
         }
-    
+        if (collider.gameObject.name == "Finish1"&& gameObject.name == "Ball1")
+        {
+            fcolor1.ChangeFlagColor("#00FF00");
+            fcolor1.ball1Entered = true;
+            fcolor1.CheckCollisions();
+        }
+
         if (collider.gameObject.name =="chain")
         {
             mirrorBallScript.s();
             collider.gameObject.SetActive(false);
         }
+        
 
         if (collider.gameObject.name=="magnet")
         {
@@ -60,7 +66,7 @@ public class Ballmovement : MonoBehaviour
         }
 
         if  (collider.gameObject.tag == "ColorFlag"){
-            Debug.Log("color flag collision");
+            Debug.Log("color flag collisiom");
             colorRumble.setTrue(collider.gameObject);
         }
        if(collider.gameObject.name=="star1"){
@@ -79,25 +85,20 @@ public class Ballmovement : MonoBehaviour
        if(collider.gameObject.CompareTag("Combiner")){
           combiner.activateball();
        }
-       if (collider.gameObject.CompareTag("Enemy"))
-        {
-            Debug.Log("enemy");
-            PlayerManager.isGameOver = true;
-        }
 
 
     }
     private void OnTriggerExit2D(Collider2D collider)
     {
 
-        if (collider.gameObject.name == "Finish1" && gameObject.name == "Ball1")
+        if (collider.gameObject.name == "Finish1")
         {
             fcolor1.ChangeFlagColor("#00F8CD");
             fcolor1.ball1Entered = false;
 
 
         }
-        if (collider.gameObject.name == "Finish2" && gameObject.name == "Ball2")
+        if (collider.gameObject.name == "Finish2")
         {
             fcolor2.ChangeFlagColor("#F80F0F");
             fcolor2.Ball2Entered = false;
@@ -128,10 +129,6 @@ public class Ballmovement : MonoBehaviour
         // {
         //     rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f * Time.deltaTime);
         // }
-        if (Input.GetButtonUp("Jump"))
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f * Time.deltaTime);
-        }
     }
     public void FixedUpdate()
     {

@@ -623,8 +623,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248733984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.963605, y: -1.6236701, z: 0.010199975}
-  m_LocalScale: {x: 0.677478, y: 4.892188, z: 1}
+  m_LocalPosition: {x: 4.963605, y: -3.4036, z: 0.010199975}
+  m_LocalScale: {x: 0.677478, y: 1.332632, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -895,7 +895,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690279516}
   m_LocalRotation: {x: -0, y: -0, z: -0.70849204, w: 0.7057188}
-  m_LocalPosition: {x: -7.79, y: -10.12, z: 0.01}
+  m_LocalPosition: {x: -7.79, y: -9.81, z: 0.01}
   m_LocalScale: {x: 0.3007729, y: 0.6614055, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1025,8 +1025,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697603268}
   m_LocalRotation: {x: 0.008727814, y: 0.00000878472, z: 0.99996144, w: -0.0010074815}
-  m_LocalPosition: {x: -7.6892, y: -7.7593, z: -0.05}
-  m_LocalScale: {x: -1.8498336, y: 3.3137505, z: 1}
+  m_LocalPosition: {x: -7.6895, y: -7.6275, z: -0.05}
+  m_LocalScale: {x: -1.8498336, y: 3.0502543, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1626,7 +1626,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926741916}
   m_LocalRotation: {x: -0.006172422, y: -0.0061705136, z: 0.70718914, w: 0.7069705}
-  m_LocalPosition: {x: -7.9664, y: -9.8456, z: -0.04}
+  m_LocalPosition: {x: -7.9664, y: -9.535601, z: -0.04}
   m_LocalScale: {x: 0.9145623, y: 0.035274956, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1757,7 +1757,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949332060}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.8862395, y: -9.278772, z: 0.009999942}
+  m_LocalPosition: {x: -7.8862395, y: -9.15, z: 0.009999942}
   m_LocalScale: {x: 0.6047665, y: 2.3423796, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3091,6 +3091,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a77f407f05df46a182bef87e9a29d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shrink: {fileID: 0}
+  big: {fileID: 0}
 --- !u!114 &1541234807
 MonoBehaviour:
   m_ObjectHideFlags: 0

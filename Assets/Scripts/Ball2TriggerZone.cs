@@ -7,6 +7,7 @@ public class Ball2TriggerZone : MonoBehaviour
 {
     public bool Ball2Entered { get; set; } = false;
     private GameObject flagObject;
+    public bool starcombinelevel = false;
     public Ball1TriggerZone ball1Zone;
     public Analytics aobj => Analytics.Instance;
 
@@ -43,14 +44,24 @@ public class Ball2TriggerZone : MonoBehaviour
        bool b1 = ball1Zone.ballentered();
 
         if(b1!=null && b2!=null && b1 && b2){
-            Debug.Log("heyyy");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            aobj.Save();
-            
+            if(starcombinelevel){
+                GameObject tr2 = GameObject.Find("triangle2");
+                GameObject flagpole = GameObject.Find("flag pole 2");
+                GameObject combiner = GameObject.Find("combiner1");
+                GameObject smallred = GameObject.Find("small triangle red");
+                GameObject bigred  = GameObject.Find("red big");
+                smallred.SetActive(false);
+                bigred.SetActive(false);
+                tr2.SetActive(false);
+                flagpole.SetActive(false);
+            }
+            else{
+                Debug.Log("heyyy");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                aobj.Save();
+            }
             
         }
-
-        
 
     }
 
