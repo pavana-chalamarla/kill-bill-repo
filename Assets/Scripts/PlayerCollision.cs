@@ -16,13 +16,16 @@ public class PlayerCollision : MonoBehaviour
         // Store the original size of the object
         originalSize = transform.localScale;
         threeQuarterSize = originalSize * 0.75f; // Set it to 3/4 of the original size
-        big.SetActive(false);
+        if(big!=null){
+            big.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            Debug.Log("Obstacle hit");
             PlayerManager.isGameOver = true;
         }
         if(collision.gameObject.CompareTag("PowerUp"))

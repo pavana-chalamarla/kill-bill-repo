@@ -55,9 +55,31 @@ public class Ball1TriggerZone : MonoBehaviour
         bool b1 = ball2Zone.ballentered();
 
         if(b1!=null && b2!=null && b1 && b2){
-            Debug.Log("heyyy");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            aobj.Save();
+            if(starcombinelevel){
+                GameObject tr1 = GameObject.Find("triangle1");
+                GameObject flagpole1 = GameObject.Find("flag pole 1");
+                GameObject combiner = GameObject.FindWithTag("Combiner");
+                GameObject smallblue = GameObject.Find("small triangle blue");
+                GameObject bigblue  = GameObject.Find("blue big");
+                GameObject tr2 = GameObject.Find("triangle2");
+                GameObject flagpole2 = GameObject.Find("flag pole 2");
+                GameObject smallred = GameObject.Find("small triangle red");
+                GameObject bigred  = GameObject.Find("red big");
+                smallred.SetActive(false);
+                bigred.SetActive(false);
+                tr2.SetActive(false);
+                flagpole1.SetActive(false);
+                smallblue.SetActive(false);
+                bigblue.SetActive(false);
+                tr1.SetActive(false);
+                flagpole2.SetActive(false);
+                activateObject(combiner);
+            }
+            else{
+                Debug.Log("heyyy");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                aobj.Save();
+            }
         }
     }
 
@@ -80,6 +102,37 @@ public class Ball1TriggerZone : MonoBehaviour
 
     public bool ballentered(){
         return this.ball1Entered;
+    }
+
+    void activateObject(GameObject objectToActivate){
+        if (objectToActivate != null)
+        {
+            SpriteRenderer spriteRenderer = objectToActivate.GetComponent<SpriteRenderer>();
+            BoxCollider2D boxCollider = objectToActivate.GetComponent<BoxCollider2D>();
+            CircleCollider2D circleCollider = objectToActivate.GetComponent<CircleCollider2D>();
+
+            if (spriteRenderer != null)
+            {
+                if (!spriteRenderer.enabled)
+                {
+                    spriteRenderer.enabled = true;
+                }
+            }
+            if (boxCollider != null)
+            {
+                if (!boxCollider.enabled)
+                {
+                    boxCollider.enabled = true;
+                }
+            }
+            if (circleCollider != null)
+            {
+                if (!circleCollider.enabled)
+                {
+                    circleCollider.enabled = true;
+                }
+            }
+        }
     }
 
     

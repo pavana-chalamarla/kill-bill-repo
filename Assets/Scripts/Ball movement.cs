@@ -33,19 +33,24 @@ public class Ballmovement : MonoBehaviour
         {
             mirrorBallScript.ToggleDirection();
         }
-        if (collider.gameObject.name == "Finish2")
+
+        if (collider.gameObject.CompareTag("Enemy"))
+        {
+            PlayerManager.isGameOver=true;
+        }
+
+        if (collider.gameObject.name == "Finish2" && gameObject.name == "Ball2")
         {
             fcolor2.ChangeFlagColor("#00FF00");
             fcolor2.Ball2Entered = true;
             fcolor2.CheckCollisions();
 //2
         }
-        if (collider.gameObject.name == "Finish1")
+        if (collider.gameObject.name == "Finish1"&& gameObject.name == "Ball1")
         {
             fcolor1.ChangeFlagColor("#00FF00");
             fcolor1.ball1Entered = true;
             fcolor1.CheckCollisions();
-
         }
 
         if (collider.gameObject.name =="chain")
@@ -53,6 +58,7 @@ public class Ballmovement : MonoBehaviour
             mirrorBallScript.s();
             collider.gameObject.SetActive(false);
         }
+        
 
         if (collider.gameObject.name=="magnet")
         {

@@ -9,9 +9,16 @@ public class ColorRumble : MonoBehaviour
     public GameObject[] nflgs;
     public int alignments = 3;
     // Start is called before the first frame update
+    public bool rumblecombiner = false;
+    public GameObject combiner;
     void Start()
     {
-        
+        if(combiner!=null){
+            combiner.SetActive(false);
+        }
+        else{
+            Debug.Log("couldn't found combiner");
+        }
     }
 
     public void setTrue(GameObject obj){
@@ -69,7 +76,13 @@ public class ColorRumble : MonoBehaviour
             }
             if (alignments==0){
                 Debug.Log("Level Completed");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                if(rumblecombiner){
+                    combiner.SetActive(true);
+                }
+                else{
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+                
             }
         }
         else

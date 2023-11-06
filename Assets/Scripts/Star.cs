@@ -11,13 +11,35 @@ public class Star : MonoBehaviour
     public GameObject star;
     public GameObject finish1;
     public GameObject finish2;
+    public GameObject combiner;
 
     public bool starcombinelevel = false;
 
+    public Transform target;  // Reference to the target object.
+    public float speed = 5.0f;  // Speed at which the object will move.
+    public float duration = 2.0f;  // Duration of the movement.
+
+    public FlyToTarget flyobj;
+
+    private float startTime;
+    private Vector3 initialPosition;
+
+    private void Start(){
+        if (combiner != null)
+        {
+            deactivateObject(combiner);
+        }
+        else
+        {
+            Debug.Log("combiner1 not found in the scene.");
+        }
+    }
     public void activateblue(){
         activateObject(smallblue);
         GameObject myGameObject = gameObject;
         deactivateObject(myGameObject);
+        //flytotarget(myGameObject);
+        //flyobj.ismoving = true;
         GameObject jump1 = GameObject.Find("jump1");
         deactivateObject(jump1);
         GameObject star3 = GameObject.Find("star3");
@@ -30,6 +52,8 @@ public class Star : MonoBehaviour
         activateObject(smallred);
         GameObject myGameObject = gameObject;
         deactivateObject(myGameObject);
+        //flytotarget(myGameObject);
+        //flyobj.ismoving = true;
         GameObject jump2 = GameObject.Find("jump2");
         deactivateObject(jump2);
         GameObject star4 = GameObject.Find("star4");
@@ -42,49 +66,55 @@ public class Star : MonoBehaviour
         activateObject(bigblue);
         GameObject objectToDeactivate = GameObject.Find("star3");
         deactivateObject(objectToDeactivate);
+        //flytotarget(objectToDeactivate);
+        //flyobj.ismoving = true;
         if(finish1!=null){
             BoxCollider2D bx1 = finish1.GetComponent<BoxCollider2D>();
             if(bx1!=null){
             bx1.enabled = true;
+            Debug.Log("finish1 activated");
         }
         }
 
         GameObject jump3 = GameObject.Find("jump3");
         deactivateObject(jump3);
-
-        if(starcombinelevel){
-            deactivateObject(smallblue);
-            deactivateObject(bigblue);
-            GameObject tr1 = GameObject.Find("triangle1");
-            GameObject flagpole = GameObject.Find("flag pole 1");
-            deactivateObject(tr1);
-            deactivateObject(flagpole);
-            GameObject combiner = GameObject.Find("combiner1");
-            activateObject(combiner);
-        }
     }
     public void activatefinish2(){
         activateObject(bigred);
         GameObject objectToDeactivate = GameObject.Find("star4");
         deactivateObject(objectToDeactivate);
+        //flytotarget(objectToDeactivate);
+        //flyobj.ismoving = true;
         if(finish2){
             BoxCollider2D bx2 = finish2.GetComponent<BoxCollider2D>();
             if(bx2!=null){
             bx2.enabled = true;
+            Debug.Log("finish2 activated");
             }
         }
         GameObject jump4 = GameObject.Find("jump4");
         deactivateObject(jump4);
 
-        if(starcombinelevel){
-            deactivateObject(smallred);
-            deactivateObject(bigred);
-            GameObject tr2 = GameObject.Find("triangle2");
-            GameObject flagpole = GameObject.Find("flag pole 2");
-            deactivateObject(tr2);
-            deactivateObject(flagpole);
-        }
+    }
 
+    private void flytotarget(GameObject obj){
+        if (target != null)
+        {
+            // Calculate the progress of the movement.
+            float journeyLength = Vector3.Distance(initialPosition, target.position);
+            float distanceCovered = (Time.time - startTime) * speed;
+            float fractionOfJourney = distanceCovered / journeyLength;
+
+            // Lerp the position between the initial and target positions.
+            transform.position = Vector3.Lerp(initialPosition, target.position, fractionOfJourney);
+
+            // If the object has reached the target, you can stop or destroy it.
+            if (fractionOfJourney >= 1.0f)
+            {
+                // Object has reached the target; you can disable, destroy, or perform other actions.
+                deactivateObject(obj);
+            }
+        }
     }
 
 
