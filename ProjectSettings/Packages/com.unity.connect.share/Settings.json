@@ -19,7 +19,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"/Users/pavanach/Desktop/sample-build_BurstDebugInformation_DoNotShip;/Users/kavyasreepolavarapu/Desktop/Betabuild;/Users/charith/Desktop/Game/Alphabuild;/Users/charith/Desktop/Build_file;;;;;;\"}"
+                "value": "{\"m_Value\":\"/Users/kavyasreepolavarapu/Desktop/finaluibetabuildnov6/buildnov6;/Users/kavyasreepolavarapu/Desktop/finaluibetabuildnov6;/Users/pavanach/Desktop/sample-build_BurstDebugInformation_DoNotShip;/Users/kavyasreepolavarapu/Desktop/Betabuild;/Users/charith/Desktop/Game/Alphabuild;/Users/charith/Desktop/Build_file;;;;\"}"
             }
         ]
     }
