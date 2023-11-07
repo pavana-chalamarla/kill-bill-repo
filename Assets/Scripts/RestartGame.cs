@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class RestartGame : MonoBehaviour
 {
+public Analytics aobj => Analytics.Instance;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
@@ -16,6 +18,7 @@ public class RestartGame : MonoBehaviour
     public void Restart()
     {
         int currentSceneBuildIndex = SceneManager.GetActiveScene().buildIndex;
+        aobj.RecordLevelRestart();
         SceneManager.LoadScene(currentSceneBuildIndex);
     }
 }
