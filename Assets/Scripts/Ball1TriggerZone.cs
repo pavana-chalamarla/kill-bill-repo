@@ -54,8 +54,8 @@ public class Ball1TriggerZone : MonoBehaviour
         bool b1 = ball1Entered;
         bool b2 = ball2Zone.ballentered();
 
-        aobj.RecordSingleFlags(b1,b2);
-
+        
+        
         if(b1!=null && b2!=null && b1 && b2){
             if(starcombinelevel){
                 GameObject tr1 = GameObject.Find("triangle1");
@@ -82,6 +82,9 @@ public class Ball1TriggerZone : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 aobj.Save();
             }
+        }
+        else if(b1!=null && b2!=null && b1 && !b2){
+            aobj.RecordSingleFlags();
         }
     }
 

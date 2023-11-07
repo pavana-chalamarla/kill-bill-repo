@@ -91,12 +91,9 @@ public class Analytics : MonoBehaviour
     {
         return saveObject.gameover;
     }
-    public void RecordSingleFlags(bool ball1, bool ball2)
+    public void RecordSingleFlags()
     {
-        if ((ball1 && !ball2))
-        {
-            saveObject.singleFlag++;
-        }
+        saveObject.singleFlag++;
     }
 
     public int GetSingleFlags()
@@ -133,14 +130,13 @@ public class Analytics : MonoBehaviour
 
     public void ResetSaveObject()
     {
-        saveObject.level="";
         saveObject.restarts = 0;
         saveObject.attemptStopwatch.Restart();
         saveObject.singleFlag = 0;
         saveObject.powerup = 0;
         saveObject.obstacle =0;
-        saveObject.powerupname="";
         saveObject.gameover = 0;
+        saveObject.powerupname = " ";
 
     }
 
@@ -156,6 +152,7 @@ public class Analytics : MonoBehaviour
         form.AddField("entry.1285814051", saveObject.obstacle);
         form.AddField("entry.373084703", firstpowerup);
         form.AddField("entry.953558190", saveObject.powerupname);
+        form.AddField("entry.664914939", saveObject.gameover);
         form.AddField("entry.134935429", PlayerPrefs.GetString("GUID"));
         
         using (UnityWebRequest www = UnityWebRequest.Post(URL, form))
