@@ -62,9 +62,6 @@ public class ColorRumble : MonoBehaviour
                     isCollided flagScript1 = flgs[i].GetComponent<isCollided>();
                     isCollided flagScript2 = nflgs[i].GetComponent<isCollided>();
 
-                aobj.RecordSingleFlags(flagScript1.flgbool,flagScript2.flgbool);
-                aobj.RecordSingleFlags(flagScript2.flgbool,flagScript1.flgbool);
-
                 if (flagScript1 != null && flagScript2 !=null && flagScript1.flgbool && flagScript2.flgbool) // Also check if the element itself is not null.
                 {
                     //bool isFlagCollided = flgs[i].flgbool;
@@ -72,6 +69,12 @@ public class ColorRumble : MonoBehaviour
                     flgs[i].SetActive(false);
                     nflgs[i].SetActive(false);
                     alignments = alignments-1;
+                }
+                else if(flagScript1 != null && flagScript2 !=null && flagScript1.flgbool && !flagScript2.flgbool){
+                    aobj.RecordSingleFlags();
+                }
+                else if(flagScript1 != null && flagScript2 !=null && !flagScript1.flgbool && flagScript2.flgbool){
+                    aobj.RecordSingleFlags();
                 }
                 else
                 {

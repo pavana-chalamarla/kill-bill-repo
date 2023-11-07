@@ -22,7 +22,7 @@ public class SaveObject
         this.singleFlag = 0;
         this.powerup = 0;
         this.obstacle = 0;
-        this.powerupname = "";
+        this.powerupname = " ";
         this.gameover = 0;
     }
 }
