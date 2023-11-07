@@ -4905,7 +4905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   speed: 225
-  jump: 16
+  jump: 13
   isFacingRight: 1
   rb: {fileID: 1932950016}
   groundCheck: {fileID: 1932950013}
@@ -5443,7 +5443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   speed: 225
-  jump: 16
+  jump: 13
   isFacingRight: 1
   rb: {fileID: 2064182629}
   groundCheck: {fileID: 2064182631}
