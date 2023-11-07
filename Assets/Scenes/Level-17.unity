@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 317775803}
   m_Layer: 3
   m_Name: Triangle
-  m_TagString: TopFlag
+  m_TagString: BottomFlag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2173,7 +2173,7 @@ GameObject:
   - component: {fileID: 1256975139}
   m_Layer: 3
   m_Name: Triangle (1)
-  m_TagString: BottomFlag
+  m_TagString: TopFlag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

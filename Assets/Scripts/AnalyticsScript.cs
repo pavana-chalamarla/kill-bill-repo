@@ -13,7 +13,7 @@ public class Analytics : MonoBehaviour
 {
     private static Analytics _instance;
     public static Analytics Instance => _instance;
-    private static string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeyIBdBXKV4-CK_MeVbmoF4Fcbtgr3EIQkpfA68xqKuXBbrJA/formResponse";
+    private static string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLfIRwunJG9nUus3WXeJWMM6aAFiVS6xnJ4xDz3-FyPuxNHg/formResponse";
     private SaveObject saveObject;
     private long sessionID;
     private string applicationVersion;
@@ -82,15 +82,6 @@ public class Analytics : MonoBehaviour
         return saveObject.obstacle;
     }
 
-    public void RecordGameOver()
-    {
-        saveObject.gameover++;
-    }
-
-    public int GetGameOver()
-    {
-        return saveObject.gameover;
-    }
     public void RecordSingleFlags()
     {
         saveObject.singleFlag++;
@@ -135,7 +126,6 @@ public class Analytics : MonoBehaviour
         saveObject.singleFlag = 0;
         saveObject.powerup = 0;
         saveObject.obstacle =0;
-        saveObject.gameover = 0;
         saveObject.powerupname = " ";
 
     }
@@ -143,17 +133,16 @@ public class Analytics : MonoBehaviour
     private IEnumerator Post(long sessionID, string totalTime,string firstpowerup)
     {
         WWWForm form = new WWWForm();
-        form.AddField("entry.241934467", sessionID.ToString());
-        form.AddField("entry.1140738487", saveObject.level);
-        form.AddField("entry.1008519031", totalTime);
-        form.AddField("entry.671951769", saveObject.restarts);
-        form.AddField("entry.1712601863", saveObject.singleFlag);
-        form.AddField("entry.78144186", saveObject.powerup);
-        form.AddField("entry.1285814051", saveObject.obstacle);
-        form.AddField("entry.373084703", firstpowerup);
-        form.AddField("entry.953558190", saveObject.powerupname);
-        form.AddField("entry.664914939", saveObject.gameover);
-        form.AddField("entry.134935429", PlayerPrefs.GetString("GUID"));
+        form.AddField("entry.942059168", sessionID.ToString());
+        form.AddField("entry.1810727681", saveObject.level);
+        form.AddField("entry.919607293", totalTime);
+        form.AddField("entry.1578023229", saveObject.restarts);
+        form.AddField("entry.628357750", saveObject.singleFlag);
+        form.AddField("entry.728399791", saveObject.powerup);
+        form.AddField("entry.587566253", saveObject.obstacle);
+        form.AddField("entry.236424767", firstpowerup);
+        form.AddField("entry.1150497477", saveObject.powerupname);
+        form.AddField("entry.768846161", PlayerPrefs.GetString("GUID"));
         
         using (UnityWebRequest www = UnityWebRequest.Post(URL, form))
         {

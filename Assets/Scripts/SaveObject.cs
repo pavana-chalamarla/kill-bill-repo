@@ -12,7 +12,6 @@ public class SaveObject
     public int powerup;
     public int obstacle;
     public string powerupname;
-    public int gameover;
 
     public SaveObject()
     {
@@ -23,6 +22,5 @@ public class SaveObject
         this.powerup = 0;
         this.obstacle = 0;
         this.powerupname = " ";
-        this.gameover = 0;
     }
 }

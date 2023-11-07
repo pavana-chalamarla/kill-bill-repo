@@ -26,7 +26,6 @@ public class PlayerManager : MonoBehaviour
     {
         if (isGameOver)
         {
-            aobj.RecordGameOver();
             gameOverScreen.SetActive(true);
         }
     }
@@ -41,10 +40,12 @@ public class PlayerManager : MonoBehaviour
     public void mainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        aobj.Save();
         Debug.Log("Mainmenu");
     }
      public void levels()
     {
+        aobj.Save();
         SceneManager.LoadScene("Levels");
        
     }
