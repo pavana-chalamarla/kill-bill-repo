@@ -18,6 +18,8 @@ public class mirror : MonoBehaviour
     public Ballmovement mirrorBallMovement;
     private bool shouldReverse = true;
     private Rigidbody rb;
+    public bool grounded;
+
     int stop=1;
   
 
@@ -41,9 +43,11 @@ public class mirror : MonoBehaviour
         mirrorBallMovement.horizontal = horizontal;
 
         // Mirror the jump movement (opposite jump)
-        if (Input.GetButtonDown("Jump") && originalBall.GetComponent<Ballmovement>().IsGrounded())
+        if (Input.GetButtonDown("Jump") && originalBall.GetComponent<Ballmovement>().IsGrounded() &&grounded)
         {
             mirrorBallMovement.rb.velocity = new Vector2(mirrorBallMovement.rb.velocity.x, -mirrorBallMovement.jump);
+                        grounded = false;
+
         }
       
     }
@@ -60,6 +64,13 @@ public class mirror : MonoBehaviour
         stop =0;
         
         // rb.isKinematic = true;
+    }
+      public void OnCollisionEnter2D(Collision2D other){
+        Debug.Log("ground collision");
+        if(other.gameObject.layer==LayerMask.NameToLayer("Ground")){
+                        grounded = true;
+
+        }
     }
     
 }

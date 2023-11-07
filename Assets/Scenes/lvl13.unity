@@ -2416,7 +2416,7 @@ GameObject:
   - component: {fileID: 1852089659}
   - component: {fileID: 1852089658}
   - component: {fileID: 1852089660}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2776,6 +2776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originalBall: {fileID: 519796727}
   mirrorBallMovement: {fileID: 1659492029}
+  grounded: 0
 --- !u!1001 &647405223802942263
 PrefabInstance:
   m_ObjectHideFlags: 0

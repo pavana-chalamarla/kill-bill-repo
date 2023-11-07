@@ -17,7 +17,7 @@ public class MirrorScript : MonoBehaviour
     private Transform mirrorTransform;
     public Ballmovement mirrorBallMovement;
     private bool shouldReverse = true;
-
+    public bool grounded;
 
     void Awake()
     {
@@ -37,9 +37,10 @@ public class MirrorScript : MonoBehaviour
         mirrorBallMovement.horizontal = horizontal;
 
         // Mirror the jump movement (opposite jump)
-        if (Input.GetButtonDown("Jump") && originalBall.GetComponent<Ballmovement>().IsGrounded())
+        if (Input.GetButtonDown("Jump") && originalBall.GetComponent<Ballmovement>().IsGrounded() && grounded)
         {
             mirrorBallMovement.rb.velocity = new Vector2(mirrorBallMovement.rb.velocity.x, -mirrorBallMovement.jump);
+            grounded = false;
         }
       
     }
@@ -50,5 +51,13 @@ public class MirrorScript : MonoBehaviour
         shouldReverse = !shouldReverse; // Toggle the direction
         LateUpdate();
 
+    }
+
+     public void OnCollisionEnter2D(Collision2D other){
+        Debug.Log("ground collision");
+        if(other.gameObject.layer==LayerMask.NameToLayer("Ground")){
+                        grounded = true;
+
+        }
     }
 }

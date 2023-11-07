@@ -935,6 +935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originalBall: {fileID: 519796727}
   mirrorBallMovement: {fileID: 0}
+  grounded: 0
 --- !u!114 &265957200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -949,7 +950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   speed: 225
-  jump: 16
+  jump: 12
   isFacingRight: 1
   rb: {fileID: 265957196}
   groundCheck: {fileID: 265957198}
@@ -963,6 +964,7 @@ MonoBehaviour:
   colorRumble: {fileID: 0}
   star: {fileID: 0}
   combiner: {fileID: 0}
+  grounded: 0
 --- !u!1 &297505916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,6 +1340,7 @@ MonoBehaviour:
   colorRumble: {fileID: 0}
   star: {fileID: 0}
   combiner: {fileID: 0}
+  grounded: 0
 --- !u!1 &527011581
 GameObject:
   m_ObjectHideFlags: 0

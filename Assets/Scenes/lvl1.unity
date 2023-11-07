@@ -2975,6 +2975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originalBall: {fileID: 519796727}
   mirrorBallMovement: {fileID: 1659492029}
+  grounded: 0
 --- !u!1001 &647405223802942263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2985,7 +2986,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 839966900093292402, guid: 45026b185f2e14d4dbde880bcf6224b0, type: 3}
       propertyPath: jump
-      value: 13
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 839966900093292402, guid: 45026b185f2e14d4dbde880bcf6224b0, type: 3}
       propertyPath: speed
@@ -3158,7 +3159,7 @@ PrefabInstance:
       objectReference: {fileID: 1659492032}
     - target: {fileID: 4673420013477971356, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
       propertyPath: jump
-      value: 13
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4673420013477971356, guid: 6b81c658a8240424c91ad514a1916603, type: 3}
       propertyPath: speed

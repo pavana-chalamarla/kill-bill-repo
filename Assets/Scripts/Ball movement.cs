@@ -20,7 +20,7 @@ public class Ballmovement : MonoBehaviour
     public Star star;
     public Combiner combiner;
     private int starcount = 0;
-
+    public bool grounded;
     public void Start()
     {
 
@@ -121,10 +121,13 @@ public class Ballmovement : MonoBehaviour
     public void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && IsGrounded() && grounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jump);
+                                grounded = false;
+
         }
+
         // if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         // {
         //     rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f * Time.deltaTime);
@@ -140,6 +143,12 @@ public class Ballmovement : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundlayer);
     }
 
+    public void OnCollisionEnter2D(Collision2D other){
+        Debug.Log("ground collision");
+        if(other.gameObject.layer==LayerMask.NameToLayer("Ground")){
+                        grounded = true;
 
+        }
+    }
     
 }

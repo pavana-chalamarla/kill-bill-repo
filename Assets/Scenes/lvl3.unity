@@ -2362,7 +2362,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalBall: {fileID: 1879696789}
-  mirrorBallMovement: {fileID: 0}
+  mirrorBallMovement: {fileID: 723705371}
+  grounded: 0
 --- !u!114 &723705371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2377,7 +2378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   speed: 225
-  jump: 13
+  jump: 12
   isFacingRight: 1
   rb: {fileID: 723705367}
   groundCheck: {fileID: 723705369}
@@ -2391,6 +2392,7 @@ MonoBehaviour:
   colorRumble: {fileID: 0}
   star: {fileID: 0}
   combiner: {fileID: 0}
+  grounded: 0
 --- !u!1 &797744907
 GameObject:
   m_ObjectHideFlags: 0
@@ -3327,6 +3329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dca207ef6d0f40568a900195e730dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  starcombinelevel: 0
   ball1Zone: {fileID: 1792110928}
 --- !u!1 &908816781
 GameObject:
@@ -6915,7 +6918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   speed: 225
-  jump: 13
+  jump: 12
   isFacingRight: 1
   rb: {fileID: 1879696792}
   groundCheck: {fileID: 1879696789}
@@ -6929,6 +6932,7 @@ MonoBehaviour:
   colorRumble: {fileID: 0}
   star: {fileID: 0}
   combiner: {fileID: 0}
+  grounded: 0
 --- !u!114 &1879696796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6946,7 +6950,7 @@ MonoBehaviour:
   groundlayer:
     serializedVersion: 2
     m_Bits: 8
-  jump: 16
+  jump: 12
   newPosition: {fileID: 2144075613}
 --- !u!1 &1887348562
 GameObject:
