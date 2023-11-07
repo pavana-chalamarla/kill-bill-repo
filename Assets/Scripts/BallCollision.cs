@@ -11,6 +11,8 @@ public class BallCollision : MonoBehaviour
     [SerializeField] public LayerMask groundlayer;
     public float jump = 16f;
     private bool hasMoved = false;
+    public Analytics aobj => Analytics.Instance;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -43,6 +45,13 @@ public class BallCollision : MonoBehaviour
         if (other.gameObject.CompareTag("Block")) // You should set a tag for your block GameObject
         {
             // Move the ball to a new position
+            aobj.RecordPowerup();
+            aobj.Recordpowerupname("Teleport");
+
+            if(aobj.GetPowerup()== 1){
+                aobj.RecordFirstpoweruptime();
+            }
+
             if (newPosition != null)
             {
                 transform.position = newPosition.position;

@@ -8,6 +8,8 @@ public class PlayerManager : MonoBehaviour
     public static bool isGameOver;
     public GameObject gameOverScreen;
 
+    public Analytics aobj => Analytics.Instance;
+
     private void Awake()
     {
         isGameOver = false;
@@ -24,6 +26,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (isGameOver)
         {
+            aobj.RecordGameOver();
             gameOverScreen.SetActive(true);
         }
     }
@@ -31,6 +34,7 @@ public class PlayerManager : MonoBehaviour
     public void restart()
     {
         Debug.Log("Restart button clicked."); // Add this line
+        aobj.RecordLevelRestart();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

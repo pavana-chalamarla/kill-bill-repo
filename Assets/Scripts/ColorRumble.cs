@@ -11,6 +11,7 @@ public class ColorRumble : MonoBehaviour
     // Start is called before the first frame update
     public bool rumblecombiner = false;
     public GameObject combiner;
+    public Analytics aobj => Analytics.Instance;
     void Start()
     {
         if(combiner!=null){
@@ -61,6 +62,9 @@ public class ColorRumble : MonoBehaviour
                     isCollided flagScript1 = flgs[i].GetComponent<isCollided>();
                     isCollided flagScript2 = nflgs[i].GetComponent<isCollided>();
 
+                aobj.RecordSingleFlags(flagScript1.flgbool,flagScript2.flgbool);
+                aobj.RecordSingleFlags(flagScript2.flgbool,flagScript1.flgbool);
+
                 if (flagScript1 != null && flagScript2 !=null && flagScript1.flgbool && flagScript2.flgbool) // Also check if the element itself is not null.
                 {
                     //bool isFlagCollided = flgs[i].flgbool;
@@ -80,6 +84,7 @@ public class ColorRumble : MonoBehaviour
                     combiner.SetActive(true);
                 }
                 else{
+                    aobj.Save();
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
                 

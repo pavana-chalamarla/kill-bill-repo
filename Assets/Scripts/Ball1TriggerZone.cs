@@ -51,8 +51,10 @@ public class Ball1TriggerZone : MonoBehaviour
     }
     public void CheckCollisions()
     {
-        bool b2 = ball1Entered;
-        bool b1 = ball2Zone.ballentered();
+        bool b1 = ball1Entered;
+        bool b2 = ball2Zone.ballentered();
+
+        aobj.RecordSingleFlags(b1,b2);
 
         if(b1!=null && b2!=null && b1 && b2){
             if(starcombinelevel){

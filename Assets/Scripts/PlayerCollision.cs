@@ -10,6 +10,9 @@ public class PlayerCollision : MonoBehaviour
 
     public GameObject shrink;
     public GameObject big;
+
+    public Analytics aobj => Analytics.Instance;
+
     
     private void Start()
     {
@@ -26,14 +29,22 @@ public class PlayerCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Obstacle hit");
+            aobj.RecordObstacle();
             PlayerManager.isGameOver = true;
         }
         if(collision.gameObject.CompareTag("PowerUp"))
         {
+            aobj.RecordPowerup();
+
+            if(aobj.GetPowerup()== 1){
+                aobj.RecordFirstpoweruptime();
+            }
+
             if(!isPowerupActive){
                 // PowerUp was not there, so activate it
                isPowerupActive = true;
                ReduceSize();
+               aobj.Recordpowerupname(" Shrink");
                shrink.SetActive(false);
                big.SetActive(true);
             }
@@ -41,6 +52,7 @@ public class PlayerCollision : MonoBehaviour
                 // PowerUp was already active, so deactivate it
                 isPowerupActive = false;
                 RestoreOriginalSize();
+                aobj.Recordpowerupname(" Unshrink");
                 big.SetActive(false);
                 shrink.SetActive(true);
             } 

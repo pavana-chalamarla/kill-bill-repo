@@ -21,6 +21,9 @@ public class Ballmovement : MonoBehaviour
     public Combiner combiner;
     private int starcount = 0;
     public bool grounded;
+
+    public Analytics aobj => Analytics.Instance;
+
     public void Start()
     {
 
@@ -32,6 +35,13 @@ public class Ballmovement : MonoBehaviour
         if (collider.gameObject.CompareTag("Mirror"))
         {
             mirrorBallScript.ToggleDirection();
+            aobj.RecordPowerup();
+            aobj.Recordpowerupname(" Mirror");
+
+            if(aobj.GetPowerup()== 1){
+                aobj.RecordFirstpoweruptime();
+            }
+
         }
 
         if (collider.gameObject.CompareTag("Enemy"))
@@ -55,6 +65,12 @@ public class Ballmovement : MonoBehaviour
 
         if (collider.gameObject.name =="chain")
         {
+            aobj.RecordPowerup();
+            aobj.Recordpowerupname(" Link");
+
+            if(aobj.GetPowerup()== 1){
+                aobj.RecordFirstpoweruptime();
+            }
             mirrorBallScript.s();
             collider.gameObject.SetActive(false);
         }
@@ -62,6 +78,12 @@ public class Ballmovement : MonoBehaviour
 
         if (collider.gameObject.name=="magnet")
         {
+            aobj.RecordPowerup();
+            aobj.Recordpowerupname(" Magnet");
+
+            if(aobj.GetPowerup()== 1){
+                aobj.RecordFirstpoweruptime();
+            }
             mg.isAttracting = true;
         }
 
@@ -70,19 +92,49 @@ public class Ballmovement : MonoBehaviour
             colorRumble.setTrue(collider.gameObject);
         }
        if(collider.gameObject.name=="star1"){
+            aobj.RecordPowerup();
+            aobj.Recordpowerupname(" Star");
+
+            if(aobj.GetPowerup()== 1){
+                aobj.RecordFirstpoweruptime();
+            }
             star.activateblue();
        }
        if(collider.gameObject.name=="star2"){
+            aobj.RecordPowerup();
+            aobj.Recordpowerupname(" Star");
+
+            if(aobj.GetPowerup()== 1){
+                aobj.RecordFirstpoweruptime();
+            }
             star.activatered();
        }
        if(collider.gameObject.name=="star3"){
+            aobj.RecordPowerup();
+            aobj.Recordpowerupname(" Star");
+
+            if(aobj.GetPowerup()== 1){
+                aobj.RecordFirstpoweruptime();
+            }
             star.activatefinish1();
        }
        if(collider.gameObject.name=="star4"){
+            aobj.RecordPowerup();
+            aobj.Recordpowerupname(" Star");
+
+            if(aobj.GetPowerup()== 1){
+                aobj.RecordFirstpoweruptime();
+            }
             star.activatefinish2();
        }
 
        if(collider.gameObject.CompareTag("Combiner")){
+          aobj.RecordPowerup();
+          aobj.Recordpowerupname(" Combiner");
+
+            if(aobj.GetPowerup()== 1){
+                aobj.RecordFirstpoweruptime();
+            }
           combiner.activateball();
        }
 
