@@ -449,7 +449,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1220378230}
         m_TargetAssemblyTypeName: LevelsScript, Assembly-CSharp
         m_MethodName: mainMenu
         m_Mode: 1
