@@ -7,88 +7,90 @@ public class LevelsScript : MonoBehaviour
 {
     public void Level1()
     {
-        SceneManager.LoadScene("lvl1");
+        SceneManager.LoadScene("Level-1");
     }
     public void Level2()
     {
-        SceneManager.LoadScene("lvl2");
+        SceneManager.LoadScene("Level-2");
     }
     public void Level3()
     {
-        SceneManager.LoadScene("lvl3");
+        SceneManager.LoadScene("Level-3");
     }
     public void Level4()
     {
-        SceneManager.LoadScene("lvl4");
+        SceneManager.LoadScene("Level-4");
     }
  public void Level5()
     {
-        SceneManager.LoadScene("lvl5");
+        SceneManager.LoadScene("Level-5");
     }
 public void Level6()
     {
-        SceneManager.LoadScene("lvl6");
+        SceneManager.LoadScene("Level-6");
     }
 public void Level7()
     {
-        SceneManager.LoadScene("lvl7");
+        SceneManager.LoadScene("Level-7");
     }
 public void Level8()
     {
-        SceneManager.LoadScene("lvl8");
+        SceneManager.LoadScene("Level-8");
     }
 public void Level9()
     {
-        SceneManager.LoadScene("lvl9");
+        SceneManager.LoadScene("Level-9");
     }
 
     public void Level10()
     {
-        SceneManager.LoadScene("lvl10");
+        SceneManager.LoadScene("Level-10");
     }
     public void Level11()
     {
-        SceneManager.LoadScene("lvl11");
+        SceneManager.LoadScene("Level-11");
     }
  public void Level12()
     {
-        SceneManager.LoadScene("lvl12");
+        SceneManager.LoadScene("Level-12");
     }
 public void Level13()
     {
-        SceneManager.LoadScene("lvl13");
+        SceneManager.LoadScene("Level-13");
     }
 public void Level14()
     {
-        SceneManager.LoadScene("lvl14");
+        SceneManager.LoadScene("Level-14");
     }
 public void Level15()
     {
-        SceneManager.LoadScene("lvl15");
+        SceneManager.LoadScene("Level-15");
     }
 public void Level16()
     {
-        SceneManager.LoadScene("lvl16");
+        SceneManager.LoadScene("Level-16");
     }
     public void Level17()
     {
-        SceneManager.LoadScene("lvl17");
+        SceneManager.LoadScene("Level-17");
     }public void Level18()
     {
-        SceneManager.LoadScene("lvl18");
+        SceneManager.LoadScene("Level-18");
     }public void Level19()
     {
-        SceneManager.LoadScene("lvl19");
+        SceneManager.LoadScene("Level-19");
     }public void Level20()
     {
-        SceneManager.LoadScene("lvl20");
+        SceneManager.LoadScene("Level-20");
     }public void Level21()
     {
-        SceneManager.LoadScene("lvl21");
+        SceneManager.LoadScene("Level-21");
     }public void Level22()
     {
-        SceneManager.LoadScene("lvl22");
+        SceneManager.LoadScene("Level-22");
     }
+  
+   
     public void mainMenu()
     {
         SceneManager.LoadScene("MainMenu");

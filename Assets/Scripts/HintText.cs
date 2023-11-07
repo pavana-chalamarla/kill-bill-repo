@@ -13,8 +13,14 @@ public class HintText : MonoBehaviour
     {
         // Make the text initially invisible
        // textObject.SetActive(false);
-        pararrow.SetActive(false);
+       if(pararrow!=null){
+                    pararrow.SetActive(false);
+
+       }
+       if(revarrow!=null){
         revarrow.SetActive(false);
+
+       }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
