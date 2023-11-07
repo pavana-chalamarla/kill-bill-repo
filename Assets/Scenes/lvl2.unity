@@ -246,7 +246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83451211}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.459, y: -5.19, z: 0.1986}
+  m_LocalPosition: {x: -0.459, y: -6.1, z: 0.1986}
   m_LocalScale: {x: 20.885921, y: -0.38004175, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1019,6 +1019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originalBall: {fileID: 2109850828}
   mirrorBallMovement: {fileID: 378418630}
+  grounded: 0
 --- !u!1 &461863364
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,7 +3234,7 @@ GameObject:
   - component: {fileID: 1420984289}
   - component: {fileID: 1420984291}
   - component: {fileID: 1420984290}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Square (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3567,7 +3568,7 @@ GameObject:
   - component: {fileID: 1629711777}
   - component: {fileID: 1629711776}
   - component: {fileID: 1629711775}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Square (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3770,7 +3771,7 @@ GameObject:
   - component: {fileID: 1692789143}
   - component: {fileID: 1692789145}
   - component: {fileID: 1692789144}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Square (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3900,7 +3901,7 @@ GameObject:
   - component: {fileID: 1697238971}
   - component: {fileID: 1697238973}
   - component: {fileID: 1697238972}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Square (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

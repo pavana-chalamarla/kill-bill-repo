@@ -1397,9 +1397,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.7240719}
   serializedVersion: 2
-  m_Radius: 2.745
+  m_Radius: 2.0659738
 --- !u!212 &531514310
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2024,7 +2024,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800208949}
   m_LocalRotation: {x: -0, y: -0.008727774, z: 0, w: 0.9999619}
-  m_LocalPosition: {x: -0.015000224, y: 0.16270018, z: 0.013288232}
+  m_LocalPosition: {x: -0.015000224, y: 0.13, z: 0.013288232}
   m_LocalScale: {x: 16.462643, y: 2.1051826, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3903,7 +3903,7 @@ GameObject:
   - component: {fileID: 1752548316}
   - component: {fileID: 1752548315}
   - component: {fileID: 1752548314}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4163,7 +4163,7 @@ GameObject:
   - component: {fileID: 1782592757}
   - component: {fileID: 1782592756}
   - component: {fileID: 1782592755}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square (09)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

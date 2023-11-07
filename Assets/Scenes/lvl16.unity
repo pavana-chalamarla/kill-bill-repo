@@ -3548,6 +3548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dca207ef6d0f40568a900195e730dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  starcombinelevel: 0
   ball1Zone: {fileID: 178128546}
 --- !u!1 &1567446228
 GameObject:
@@ -4460,7 +4461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   speed: 225
-  jump: 16
+  jump: 14
   isFacingRight: 1
   rb: {fileID: 1932950016}
   groundCheck: {fileID: 1932950013}
@@ -4474,6 +4475,7 @@ MonoBehaviour:
   colorRumble: {fileID: 0}
   star: {fileID: 0}
   combiner: {fileID: 0}
+  grounded: 0
 --- !u!114 &1932950019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4652,6 +4654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originalBall: {fileID: 1932950013}
   mirrorBallMovement: {fileID: 0}
+  grounded: 0
 --- !u!114 &2064182633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4666,7 +4669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   speed: 225
-  jump: 16
+  jump: 14
   isFacingRight: 1
   rb: {fileID: 2064182629}
   groundCheck: {fileID: 2064182631}
@@ -4680,3 +4683,4 @@ MonoBehaviour:
   colorRumble: {fileID: 0}
   star: {fileID: 0}
   combiner: {fileID: 0}
+  grounded: 0
