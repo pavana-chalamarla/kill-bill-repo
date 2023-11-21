@@ -21,6 +21,7 @@ public class Star : MonoBehaviour
 
     public FlyToTarget flyobj;
 
+
     private float startTime;
     private Vector3 initialPosition;
 
@@ -38,29 +39,46 @@ public class Star : MonoBehaviour
         activateObject(smallblue);
         GameObject myGameObject = gameObject;
         deactivateObject(myGameObject);
-        //flytotarget(myGameObject);
-        //flyobj.ismoving = true;
         GameObject jump1 = GameObject.Find("jump1");
         deactivateObject(jump1);
-        GameObject star3 = GameObject.Find("star3");
-        activateObject(star3);
-        GameObject jump3 = GameObject.Find("jump3");
-        activateObject(jump3);
+        bothactive();
     }
 
     public void activatered(){
         activateObject(smallred);
         GameObject myGameObject = gameObject;
         deactivateObject(myGameObject);
-        //flytotarget(myGameObject);
-        //flyobj.ismoving = true;
         GameObject jump2 = GameObject.Find("jump2");
         deactivateObject(jump2);
-        GameObject star4 = GameObject.Find("star4");
-        activateObject(star4);
-        GameObject jump4 = GameObject.Find("jump4");
-        activateObject(jump4);
+        bothactive();
     }
+
+    public void bothactive(){
+        GameObject star1 = GameObject.Find("star1");
+        GameObject star2 = GameObject.Find("star2");
+        if (star1 != null && star2!=null)
+        {
+            SpriteRenderer star1ren = star1.GetComponent<SpriteRenderer>();
+            SpriteRenderer star2ren = star2.GetComponent<SpriteRenderer>();
+
+            if (star1ren != null && star2ren !=null)
+            {
+                if (!star1ren.enabled && !star2ren.enabled)
+                {
+                    GameObject star3 = GameObject.Find("star3");
+                    activateObject(star3);
+                    GameObject jump3 = GameObject.Find("jump3");
+                    activateObject(jump3);
+
+                    GameObject star4 = GameObject.Find("star4");
+                    activateObject(star4);
+                    GameObject jump4 = GameObject.Find("jump4");
+                    activateObject(jump4);
+                }
+            }
+        }
+    }
+
 
     public void activatefinish1(){
         activateObject(bigblue);

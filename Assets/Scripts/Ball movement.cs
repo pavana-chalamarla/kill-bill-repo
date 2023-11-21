@@ -88,7 +88,7 @@ public class Ballmovement : MonoBehaviour
         }
 
         if  (collider.gameObject.tag == "ColorFlag"){
-            Debug.Log("color flag collisiom");
+            Debug.Log("color flag collision");
             colorRumble.setTrue(collider.gameObject);
         }
        if(collider.gameObject.name=="star1"){
@@ -176,7 +176,7 @@ public class Ballmovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded() && grounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jump);
-                                grounded = false;
+            grounded = false;
 
         }
 
