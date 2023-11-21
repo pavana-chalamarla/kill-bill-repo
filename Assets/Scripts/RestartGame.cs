@@ -18,7 +18,8 @@ public Analytics aobj => Analytics.Instance;
     public void Restart()
     {
         int currentSceneBuildIndex = SceneManager.GetActiveScene().buildIndex;
-        aobj.RecordLevelRestart();
         SceneManager.LoadScene(currentSceneBuildIndex);
+        aobj.RecordLevelRestart();
+
     }
 }
