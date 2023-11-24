@@ -12,6 +12,7 @@ public class BallCollision : MonoBehaviour
     public float jump = 16f;
     private bool hasMoved = false;
     public Analytics aobj => Analytics.Instance;
+    public bool grounded;
 
     void Start()
     {
@@ -25,10 +26,6 @@ public class BallCollision : MonoBehaviour
             if (Input.GetButtonDown("Jump") && IsGrounded())
                 {
                     rb.velocity = new Vector2(rb.velocity.x, -jump);
-                }
-                if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-                {
-                    rb.velocity = new Vector2(rb.velocity.x, -rb.velocity.y * 0.5f * Time.deltaTime);
                 }
         }
         

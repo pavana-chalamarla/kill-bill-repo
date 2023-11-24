@@ -33,8 +33,9 @@ public class PlayerManager : MonoBehaviour
     public void restart()
     {
         Debug.Log("Restart button clicked."); // Add this line
+          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         aobj.RecordLevelRestart();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+      
     }
 
     public void mainMenu()
@@ -45,8 +46,9 @@ public class PlayerManager : MonoBehaviour
     }
      public void levels()
     {
-        aobj.Save();
+        
         SceneManager.LoadScene("Levels");
+        aobj.Save();
        
     }
 }
