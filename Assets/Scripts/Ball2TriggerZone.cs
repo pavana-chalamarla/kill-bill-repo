@@ -6,19 +6,14 @@ using UnityEngine.SceneManagement;
 public class Ball2TriggerZone : MonoBehaviour
 {
     public bool Ball2Entered { get; set; } = false;
-    private GameObject flagObject;
+    public GameObject flagObject;
     public bool starcombinelevel = false;
     public Ball1TriggerZone ball1Zone;
     public Analytics aobj => Analytics.Instance;
 
     private void Start()
     {
-        // Find the object with the tag "flag1" at the start
-        flagObject = GameObject.FindGameObjectWithTag("BottomFlag");
-        if (flagObject == null)
-        {
-            Debug.LogError("No object with tag 'BottomFlag' found.");
-        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -45,15 +40,23 @@ public class Ball2TriggerZone : MonoBehaviour
 
         if(b1!=null && b2!=null && b1 && b2){
             if(starcombinelevel){
+                GameObject tr1 = GameObject.Find("triangle1");
+                GameObject flagpole1 = GameObject.Find("flag pole 1");
+                GameObject combiner = GameObject.FindWithTag("Combiner");
+                GameObject smallblue = GameObject.Find("small triangle blue");
+                GameObject bigblue  = GameObject.Find("blue big");
                 GameObject tr2 = GameObject.Find("triangle2");
-                GameObject flagpole = GameObject.Find("flag pole 2");
-                GameObject combiner = GameObject.Find("combiner1");
+                GameObject flagpole2 = GameObject.Find("flag pole 2");
                 GameObject smallred = GameObject.Find("small triangle red");
                 GameObject bigred  = GameObject.Find("red big");
                 smallred.SetActive(false);
                 bigred.SetActive(false);
                 tr2.SetActive(false);
-                flagpole.SetActive(false);
+                flagpole1.SetActive(false);
+                smallblue.SetActive(false);
+                bigblue.SetActive(false);
+                tr1.SetActive(false);
+                flagpole2.SetActive(false);
             }
             else{
                 Debug.Log("heyyy");
@@ -70,6 +73,13 @@ public class Ball2TriggerZone : MonoBehaviour
 
    public void ChangeFlagColor(string hexColor)
 {
+    if (flagObject == null)
+    {
+        flagObject = GameObject.FindWithTag("BottomFlag");
+        if(flagObject == null){
+            Debug.Log("No object with tag 'BottomFlag' found.");
+        }
+    }
     if (flagObject != null)
     {
         Color color;

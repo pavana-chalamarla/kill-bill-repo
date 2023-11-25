@@ -17,7 +17,7 @@ public class Ballmovement : MonoBehaviour
     public Ball2TriggerZone fcolor2;
     public ColorRumble colorRumble;
 
-    public Star star;
+    public StarManager star;
     public Combiner combiner;
     private int starcount = 0;
     public bool grounded;
@@ -49,14 +49,14 @@ public class Ballmovement : MonoBehaviour
             PlayerManager.isGameOver=true;
         }
 
-        if (collider.gameObject.name == "Finish2" && gameObject.name == "Ball2")
+        if (collider.gameObject.name == "Finish2" && (gameObject.name == "Ball2" || gameObject.name == "Top ball 2"))
         {
             fcolor2.ChangeFlagColor("#00FF00");
             fcolor2.Ball2Entered = true;
             fcolor2.CheckCollisions();
 //2
         }
-        if (collider.gameObject.name == "Finish1"&& gameObject.name == "Ball1")
+        if (collider.gameObject.name == "Finish1" && gameObject.name == "Ball1")
         {
             fcolor1.ChangeFlagColor("#00FF00");
             fcolor1.ball1Entered = true;
@@ -91,42 +91,6 @@ public class Ballmovement : MonoBehaviour
             Debug.Log("color flag collision");
             colorRumble.setTrue(collider.gameObject);
         }
-       if(collider.gameObject.name=="star1"){
-            aobj.RecordPowerup();
-            aobj.Recordpowerupname(" Star");
-
-            if(aobj.GetPowerup()== 1){
-                aobj.RecordFirstpoweruptime();
-            }
-            star.activateblue();
-       }
-       if(collider.gameObject.name=="star2"){
-            aobj.RecordPowerup();
-            aobj.Recordpowerupname(" Star");
-
-            if(aobj.GetPowerup()== 1){
-                aobj.RecordFirstpoweruptime();
-            }
-            star.activatered();
-       }
-       if(collider.gameObject.name=="star3"){
-            aobj.RecordPowerup();
-            aobj.Recordpowerupname(" Star");
-
-            if(aobj.GetPowerup()== 1){
-                aobj.RecordFirstpoweruptime();
-            }
-            star.activatefinish1();
-       }
-       if(collider.gameObject.name=="star4"){
-            aobj.RecordPowerup();
-            aobj.Recordpowerupname(" Star");
-
-            if(aobj.GetPowerup()== 1){
-                aobj.RecordFirstpoweruptime();
-            }
-            star.activatefinish2();
-       }
 
        if(collider.gameObject.CompareTag("Combiner")){
           aobj.RecordPowerup();
@@ -136,6 +100,11 @@ public class Ballmovement : MonoBehaviour
                 aobj.RecordFirstpoweruptime();
             }
           combiner.activateball();
+       }
+
+       if(collider.gameObject.CompareTag("Star")){
+            print("star");
+            star.starcollison(collider,gameObject);
        }
 
 
@@ -154,8 +123,6 @@ public class Ballmovement : MonoBehaviour
         {
             fcolor2.ChangeFlagColor("#F80F0F");
             fcolor2.Ball2Entered = false;
-
-
         }
 
         if (collider.gameObject.name == "magnet")
@@ -198,7 +165,7 @@ public class Ballmovement : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D other){
         Debug.Log("ground collision");
         if(other.gameObject.layer==LayerMask.NameToLayer("Ground")){
-                        grounded = true;
+            grounded = true;
 
         }
     }

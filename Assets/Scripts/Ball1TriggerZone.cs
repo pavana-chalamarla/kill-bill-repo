@@ -8,7 +8,7 @@ public class Ball1TriggerZone : MonoBehaviour
 {
     public bool ball1Entered { get; set; } = false;
     public bool starcombinelevel = false;
-    private GameObject flagObject;
+    public GameObject flagObject;
     public Ball2TriggerZone ball2Zone;
     public Analytics aobj => Analytics.Instance;
 
@@ -16,12 +16,6 @@ public class Ball1TriggerZone : MonoBehaviour
     private void Start()
     {
         Debug.Log("collision.");
-        // Find the object with the tag "flag1" at the start
-        flagObject = GameObject.FindGameObjectWithTag("TopFlag");
-        if (flagObject == null)
-        {
-            Debug.Log("No object with tag 'TopFlag' found.");
-        }
     }
    
     private void OnTriggerEnter2D (Collider2D other)
@@ -90,6 +84,14 @@ public class Ball1TriggerZone : MonoBehaviour
 
    public void ChangeFlagColor(string hexColor)
 {
+    // Find the object with the tag "flag1" at the start
+    if (flagObject == null)
+    {
+        flagObject = GameObject.FindWithTag("TopFlag");
+        if(flagObject == null){
+            Debug.Log("No object with tag 'TopFlag' found.");
+        }
+    }
     if (flagObject != null)
     {
         Color color;

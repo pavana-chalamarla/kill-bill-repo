@@ -29,8 +29,9 @@ public class StarManager : MonoBehaviour
         finish2.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void starcollison(Collider2D collision, GameObject gObj)
     {
+        print("hey");
         if(collision.gameObject.name == "star1")
         {
             aobj.RecordPowerup();
@@ -40,7 +41,6 @@ public class StarManager : MonoBehaviour
             }
             star1.SetActive(false);
             bothactive();
-            
             smallblue.SetActive(true);
         }
         if(collision.gameObject.name == "star2")
@@ -55,7 +55,7 @@ public class StarManager : MonoBehaviour
             
             smallred.SetActive(true);
         }
-        if(collision.gameObject.name == "star3" && gameObject.name == "Ball1")
+        if(collision.gameObject.name == "star3" && (gObj.name == "Ball1"))
         {
             aobj.RecordPowerup();
 
@@ -65,10 +65,11 @@ public class StarManager : MonoBehaviour
 
             star3.SetActive(false);
             finish1.SetActive(true);
+            print("finish activated");
             bigblue.SetActive(true);
 
         }
-        if(collision.gameObject.name == "star4" && (gameObject.name == "Ball2" || gameObject.name == "New Ball 2") )
+        if(collision.gameObject.name == "star4" && (gObj.name == "Ball2" || gObj.name == "Top ball 2") )
         {
             aobj.RecordPowerup();
 
@@ -78,6 +79,7 @@ public class StarManager : MonoBehaviour
 
             star4.SetActive(false);
             finish2.SetActive(true);
+            print("finish activated");
             bigred.SetActive(true);
         }
     }
@@ -86,6 +88,8 @@ public class StarManager : MonoBehaviour
         if(!star1.activeSelf && !star2.activeSelf){
             star3.SetActive(true);
             star4.SetActive(true);
+            smallblue.SetActive(true);
+            smallred.SetActive(true);
         }
     }
 }
