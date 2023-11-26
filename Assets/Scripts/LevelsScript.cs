@@ -89,6 +89,22 @@ public void Level16()
     {
         SceneManager.LoadScene("Level-22");
     }
+    public void Level23()
+    {
+        SceneManager.LoadScene("Level-23");
+    }
+    public void Level24()
+    {
+        SceneManager.LoadScene("Level-24");
+    }
+    public void Level25()
+    {
+        SceneManager.LoadScene("Level-25");
+    }
+    public void Level26()
+    {
+        SceneManager.LoadScene("Level-26");
+    }
   
    
     public void mainMenu()
