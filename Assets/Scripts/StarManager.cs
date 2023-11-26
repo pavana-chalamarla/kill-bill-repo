@@ -32,7 +32,7 @@ public class StarManager : MonoBehaviour
     public void starcollison(Collider2D collision, GameObject gObj)
     {
         print("hey");
-        if(collision.gameObject.name == "star1")
+        if(collision.gameObject.name == "star1" && (gObj.name == "Ball1"))
         {
             aobj.RecordPowerup();
 
@@ -43,7 +43,7 @@ public class StarManager : MonoBehaviour
             bothactive();
             smallblue.SetActive(true);
         }
-        if(collision.gameObject.name == "star2")
+        if(collision.gameObject.name == "star2" && (gObj.name == "Ball2" || gObj.name == "Top ball 2") )
         {
             aobj.RecordPowerup();
 
