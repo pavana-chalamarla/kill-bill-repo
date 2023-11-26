@@ -66,6 +66,18 @@ public class Ball2TriggerZone : MonoBehaviour
 
                 if (confettiParticles != null)
                 {
+                    GameObject ball1 = GameObject.Find("Ball1");
+                    GameObject ball2 = GameObject.Find("Ball2");
+                    GameObject ball3 = GameObject.Find("Top ball 2");
+                    if(ball1 !=null){
+                        ball1.SetActive(false);
+                    }
+                    if(ball2 !=null){
+                        ball2.SetActive(false);
+                    }
+                    if(ball3 !=null){
+                        ball3.SetActive(false);
+                    }
                     confettiParticles.Play();
                     float confettiDuration = confettiParticles.main.duration;
                     Invoke("LoadNextScene", confettiDuration);
