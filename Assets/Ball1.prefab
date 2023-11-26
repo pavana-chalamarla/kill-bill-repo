@@ -174,7 +174,3 @@ MonoBehaviour:
   fcolor1: {fileID: 0}
   mg: {fileID: 0}
   fcolor2: {fileID: 0}
-  colorRumble: {fileID: 0}
-  star: {fileID: 0}
-  combiner: {fileID: 0}
-  grounded: 0

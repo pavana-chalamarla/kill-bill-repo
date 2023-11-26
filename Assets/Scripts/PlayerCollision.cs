@@ -19,7 +19,7 @@ public class PlayerCollision : MonoBehaviour
         // Store the original size of the object
         originalSize = transform.localScale;
         threeQuarterSize = originalSize * 0.75f; // Set it to 3/4 of the original size
-        if(big!=null && shrink.activeSelf){
+        if(big!=null){
             big.SetActive(false);
         }
     }

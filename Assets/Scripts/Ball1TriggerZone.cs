@@ -8,15 +8,20 @@ public class Ball1TriggerZone : MonoBehaviour
 {
     public bool ball1Entered { get; set; } = false;
     public bool starcombinelevel = false;
-    public GameObject flagObject;
+    private GameObject flagObject;
     public Ball2TriggerZone ball2Zone;
     public Analytics aobj => Analytics.Instance;
-    private ParticleSystem confettiParticles;
 
 
     private void Start()
     {
         Debug.Log("collision.");
+        // Find the object with the tag "flag1" at the start
+        flagObject = GameObject.FindGameObjectWithTag("TopFlag");
+        if (flagObject == null)
+        {
+            Debug.Log("No object with tag 'TopFlag' found.");
+        }
     }
    
     private void OnTriggerEnter2D (Collider2D other)
@@ -73,20 +78,9 @@ public class Ball1TriggerZone : MonoBehaviour
                 activateObject(combiner);
             }
             else{
-                Debug.Log("Congrats, Level done!");
-                // Play the confetti particles
-                ParticleSystem confettiParticles = GameObject.Find("Particle System").GetComponent<ParticleSystem>();
-
-                if (confettiParticles != null)
-                {
-                    confettiParticles.Play();
-                    float confettiDuration = confettiParticles.main.duration;
-                    Invoke("LoadNextScene", confettiDuration);
-                }
-                else
-                {
-                    Debug.LogError("Particle System not found!");
-                }
+                Debug.Log("heyyy");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                aobj.Save();
             }
         }
         else if(b1!=null && b2!=null && b1 && !b2){
@@ -96,14 +90,6 @@ public class Ball1TriggerZone : MonoBehaviour
 
    public void ChangeFlagColor(string hexColor)
 {
-    // Find the object with the tag "flag1" at the start
-    if (flagObject == null)
-    {
-        flagObject = GameObject.FindWithTag("TopFlag");
-        if(flagObject == null){
-            Debug.Log("No object with tag 'TopFlag' found.");
-        }
-    }
     if (flagObject != null)
     {
         Color color;
@@ -121,11 +107,6 @@ public class Ball1TriggerZone : MonoBehaviour
 
     public bool ballentered(){
         return this.ball1Entered;
-    }
-
-    void LoadNextScene(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        aobj.Save();
     }
 
     void activateObject(GameObject objectToActivate){
