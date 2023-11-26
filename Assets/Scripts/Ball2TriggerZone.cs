@@ -10,6 +10,7 @@ public class Ball2TriggerZone : MonoBehaviour
     public bool starcombinelevel = false;
     public Ball1TriggerZone ball1Zone;
     public Analytics aobj => Analytics.Instance;
+    private ParticleSystem confettiParticles;
 
     private void Start()
     {
@@ -59,9 +60,22 @@ public class Ball2TriggerZone : MonoBehaviour
                 flagpole2.SetActive(false);
             }
             else{
-                Debug.Log("heyyy");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                aobj.Save();
+                Debug.Log("Congrats, Level done!");
+                // Find the Particle System by name
+                ParticleSystem confettiParticles = GameObject.Find("Particle System").GetComponent<ParticleSystem>();
+
+                if (confettiParticles != null)
+                {
+                    confettiParticles.Play();
+                    float confettiDuration = confettiParticles.main.duration;
+                    Invoke("LoadNextScene", confettiDuration);
+                }
+                else
+                {
+                    Debug.LogError("Particle System not found!");
+                }
+                
+                
             }
             
         }
@@ -96,6 +110,11 @@ public class Ball2TriggerZone : MonoBehaviour
 
     public bool ballentered(){
         return this.Ball2Entered;
+    }
+
+    void LoadNextScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        aobj.Save();
     }
 
 

@@ -11,6 +11,7 @@ public class Ball1TriggerZone : MonoBehaviour
     public GameObject flagObject;
     public Ball2TriggerZone ball2Zone;
     public Analytics aobj => Analytics.Instance;
+    private ParticleSystem confettiParticles;
 
 
     private void Start()
@@ -72,9 +73,20 @@ public class Ball1TriggerZone : MonoBehaviour
                 activateObject(combiner);
             }
             else{
-                Debug.Log("heyyy");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                aobj.Save();
+                Debug.Log("Congrats, Level done!");
+                // Play the confetti particles
+                ParticleSystem confettiParticles = GameObject.Find("Particle System").GetComponent<ParticleSystem>();
+
+                if (confettiParticles != null)
+                {
+                    confettiParticles.Play();
+                    float confettiDuration = confettiParticles.main.duration;
+                    Invoke("LoadNextScene", confettiDuration);
+                }
+                else
+                {
+                    Debug.LogError("Particle System not found!");
+                }
             }
         }
         else if(b1!=null && b2!=null && b1 && !b2){
@@ -109,6 +121,11 @@ public class Ball1TriggerZone : MonoBehaviour
 
     public bool ballentered(){
         return this.ball1Entered;
+    }
+
+    void LoadNextScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        aobj.Save();
     }
 
     void activateObject(GameObject objectToActivate){

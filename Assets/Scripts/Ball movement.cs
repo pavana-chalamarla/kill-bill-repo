@@ -26,6 +26,8 @@ public class Ballmovement : MonoBehaviour
 
     public void Start()
     {
+        ParticleSystem confettiParticles = GameObject.Find("Particle System").GetComponent<ParticleSystem>();
+        confettiParticles.Stop();
 
     }
 
