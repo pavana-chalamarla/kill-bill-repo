@@ -5,14 +5,12 @@ using UnityEngine;
 public class BallCollision : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float newGravityScale = -4.0f;
     private Rigidbody2D rb;
     [SerializeField] public Transform groundCheck;
     [SerializeField] public LayerMask groundlayer;
     public float jump = 16f;
-    private bool hasMoved = false;
+    public bool isTop = false;
     public Analytics aobj => Analytics.Instance;
-    public bool grounded;
 
     void Start()
     {
@@ -22,20 +20,28 @@ public class BallCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(hasMoved){
-            if (Input.GetButtonDown("Jump") && IsGrounded())
-                {
-                    rb.velocity = new Vector2(rb.velocity.x, -jump);
-                }
+        if (Input.GetButtonDown("Jump") && IsGrounded())
+    {
+        if (isTop)
+        {
+            // Apply top jump force
+            rb.velocity = new Vector2(rb.velocity.x, jump);
         }
-        
+        else
+        {
+            // Apply bottom jump force
+            rb.velocity = new Vector2(rb.velocity.x, -jump);
+        }
+    }
     }
     public bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundlayer);
     }
 
-    public Transform newPosition; // Assign the new position in the Inspector
+    public Transform topPosition; // Assign the top position in the Inspector
+    public Transform bottomPosition; // Assign the bottom position in the Inspector
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -49,16 +55,32 @@ public class BallCollision : MonoBehaviour
                 aobj.RecordFirstpoweruptime();
             }
 
-            if (newPosition != null)
+            // Move the ball to the opposite position
+            if (isTop)
             {
-                transform.position = newPosition.position;
-                // You may also want to reset the ball's velocity
-                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                // Change the gravity scale of the ball.
-                 rb.gravityScale = newGravityScale;
-                // Mirror the jump movement (opposite jump)
-                hasMoved = true;
+                if(bottomPosition != null){
+                    transform.position = bottomPosition.position;
+                }
+                else{
+                    Debug.Log("No bottom");
+                }
             }
+            else
+            {
+                if(topPosition != null){
+                    transform.position = topPosition.position;
+                }
+                else{
+                    Debug.Log("No top");
+                }
+            }
+
+            // Reverse the gravity scale of the ball.
+            rb.gravityScale = -rb.gravityScale;
+
+            // Toggle the top/bottom flag
+            isTop = !isTop;
         }
+
     }
 }

@@ -15,6 +15,7 @@ public class BigBall : MonoBehaviour
     [SerializeField] public Rigidbody2D rb;
     [SerializeField] public Transform groundCheck;
     [SerializeField] public LayerMask groundlayer;
+    private ParticleSystem confettiParticles;
     void Start()
     {
         
@@ -25,8 +26,21 @@ public class BigBall : MonoBehaviour
         if(collider.gameObject.name=="Finish"){
             flagObject = GameObject.Find("Triangle");
             ChangeFlagColor("#00FF00");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            aobj.Save();
+            Debug.Log("Congrats, Level done!");
+                // Play the confetti particles
+            ParticleSystem confettiParticles = GameObject.Find("Particle System").GetComponent<ParticleSystem>();
+
+            if (confettiParticles != null)
+            {
+                confettiParticles.Play();
+                float confettiDuration = confettiParticles.main.duration;
+                Invoke("LoadNextScene", confettiDuration);
+            }
+            else
+            {
+                Debug.LogError("Particle System not found!");
+            }
+
         }
     }
 
@@ -74,5 +88,10 @@ public class BigBall : MonoBehaviour
         }
     }
 }
+
+void LoadNextScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        aobj.Save();
+    }
 
 }
