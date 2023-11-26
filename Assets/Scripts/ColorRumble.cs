@@ -87,8 +87,18 @@ public class ColorRumble : MonoBehaviour
                     combiner.SetActive(true);
                 }
                 else{
-                    aobj.Save();
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    ParticleSystem confettiParticles = GameObject.Find("Particle System").GetComponent<ParticleSystem>();
+
+                    if (confettiParticles != null)
+                    {
+                        confettiParticles.Play();
+                        float confettiDuration = confettiParticles.main.duration;
+                        Invoke("LoadNextScene", confettiDuration);
+                    }
+                    else
+                    {
+                        Debug.LogError("Particle System not found!");
+                    }
                 }
                 
             }
@@ -97,6 +107,10 @@ public class ColorRumble : MonoBehaviour
         {
             Debug.LogError("The 'flgs' array is null or empty.");
         } 
+    }
+    void LoadNextScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        aobj.Save();
     }
     // Update is called once per frame
     void Update()
