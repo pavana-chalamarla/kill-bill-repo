@@ -137,6 +137,11 @@ public void Level16()
         SceneManager.LoadScene("Chapter5");
         Debug.Log("Mainmenu");
     }
+     public void ch6()
+    {
+        SceneManager.LoadScene("Chapter6");
+        Debug.Log("Mainmenu");
+    }
     // Start is called before the first frame update
     void Start()
     {
