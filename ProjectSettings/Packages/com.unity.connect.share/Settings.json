@@ -19,7 +19,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"/Users/pavanach/Desktop/killbill-beta-final;/Users/charith/Desktop/Game/Beta build;/Users/kavyasreepolavarapu/Desktop/finaluibetabuildnov6/buildnov6;/Users/kavyasreepolavarapu/Desktop/finaluibetabuildnov6;/Users/pavanach/Desktop/sample-build_BurstDebugInformation_DoNotShip;/Users/kavyasreepolavarapu/Desktop/Betabuild;/Users/charith/Desktop/Build_file;;;\"}"
+                "value": "{\"m_Value\":\"/Users/charith/Desktop/Game/Build;/Users/pavanach/Desktop/killbill-beta-final;/Users/kavyasreepolavarapu/Desktop/finaluibetabuildnov6/buildnov6;/Users/kavyasreepolavarapu/Desktop/finaluibetabuildnov6;/Users/pavanach/Desktop/sample-build_BurstDebugInformation_DoNotShip;/Users/kavyasreepolavarapu/Desktop/Betabuild;/Users/charith/Desktop/Build_file;;;\"}"
             }
         ]
     }

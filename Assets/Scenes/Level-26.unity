@@ -2075,8 +2075,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a77f407f05df46a182bef87e9a29d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shrink: {fileID: 0}
-  big: {fileID: 0}
+  shrink: {fileID: 439025921}
+  big: {fileID: 1523530830}
 --- !u!4 &519796727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7228743433270946871, guid: 45026b185f2e14d4dbde880bcf6224b0, type: 3}
